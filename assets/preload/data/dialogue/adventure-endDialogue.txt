@@ -1,0 +1,14 @@
+:generic:Tristan, Tristan where are you!?!?
+:tristan:Uh?
+:generic:Tristan looks back and sees his dad Dave.
+:dave,post-maze:Tristan there you are, I've been looking for you everywhere!
+:tristan:Sorry dad, I'm just singing with him.
+:bf:Beep!
+:dave:Oh hi there, you just came early to the festival.
+:gf,happy:Yeah, we are bored so we decided to go to your House.
+:bf:Boh.
+:dave:Ah well… you can go inside my house there a lot of my friends inside.
+:gf,confused:Wait… Really?
+:tristan:Yeah there are good friends!
+:bf:Beep beep!
+:generic:Boyfriend and Girlfriend went inside the Dave house to meet friends.

@@ -1,0 +1,12 @@
+:generic:3 week later (after festival), BF and GF decided to visit dave agaun
+:bf:Beep!
+:dave:Oh hello there bf! Long time to see right?
+:bf:Yeah!
+:dave:Anyway, what brings you here this time?
+:dave,post-maze:And you've came in wrong time, i have to home-school tristan and well...it's pain as hell.
+:gf:Well maybe you can take a small break
+:bf:Bep
+:dave:Huh? a rap battle?
+:dave,annoyed:Well sure, are you ready bf?
+:bf,ready:Yeah!
+:dave,annoyed:Alrighty then, lets do it!
