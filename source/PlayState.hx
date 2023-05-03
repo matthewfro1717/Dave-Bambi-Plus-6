@@ -4022,6 +4022,19 @@ class PlayState extends MusicBeatState
 				FlxG.switchState(new MathGameState());
 			}
 		}
+		if (hat != null)
+			{
+				if (FlxG.mouse.overlaps(hat) && FlxG.mouse.justPressed)
+				{
+					PlayState.SONG = Song.loadFromJson('electric-cockaldoodledoo');
+					PlayState.storyWeek = 18;
+		
+					FlxG.save.data.electricCockaldoodledooUnlocked = true;
+					FlxG.save.flush();
+		
+					FlxG.switchState(new PlayState());
+				}
+			}
 		
 		var toy = -100 + -Math.sin((curStep / 9.5) * 2) * 30 * 5;
 		var tox = -330 -Math.cos((curStep / 9.5)) * 100;
@@ -5787,16 +5800,14 @@ class PlayState extends MusicBeatState
 						CharacterSelectState.unlockCharacter('bambi-splitathon');
 					case "cheating":
 						if (modchartoption) CharacterSelectState.unlockCharacter('bambi-3d');
-					case "cheating":
-						CharacterSelectState.unlockCharacter('bambi-3d');
-						CharacterSelectState.unlockCharacter('bambi-3d-old');
+						if (modchartoption) CharacterSelectState.unlockCharacter('bambi-3d-old');
 					case "bonkers":
 						CharacterSelectState.unlockCharacter('longnosejohn');
 					case "unfairness":
-						CharacterSelectState.unlockCharacter('bambi-unfair');
-						CharacterSelectState.unlockCharacter('bambi-unfair-old');
+						if (modchartoption) CharacterSelectState.unlockCharacter('bambi-unfair');
+						if (modchartoption) CharacterSelectState.unlockCharacter('bambi-unfair-old');
 					case "exploitation":
-						CharacterSelectState.unlockCharacter('expunged-playable');
+						if (modchartoption) CharacterSelectState.unlockCharacter('expunged-playable');
 					case "furiosity":
 						CharacterSelectState.unlockCharacter('furiosity-dave');
 						CharacterSelectState.unlockCharacter('furiosity-dave-alpha-4');
@@ -10287,7 +10298,7 @@ class PlayState extends MusicBeatState
 						];
 
 						#if windows
-						popupWindow();
+						if (modchartoption) popupWindow();
 						#end
 					case 9504 | 9632:
 						shakeCam = true;
