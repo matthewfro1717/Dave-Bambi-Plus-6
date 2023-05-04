@@ -180,7 +180,7 @@ class PlayState extends MusicBeatState
 
 	var funnyFloatyBoys:Array<String> = ['dave-angey', 'bambi-3d', 'expunged', 'bambi-unfair', 'exbungo',
 	'dave-festival-3d', 'dave-3d-recursed', 'bf-3d', 'dave-angey-old', 'dave-insanity-3d', 'dave-3d-standing-bruh-what',
-	'furiosity-dave', 'furiosity-dave-alpha-4', 'bambi-unfair', 'expunged-playable', 'bambi-3d-scrapped', 'bambi-3d-old',
+	'furiosity-dave', 'furiosity-dave-alpha-4', 'bambi-unfair', 'bambi-3d-scrapped', 'bambi-3d-old',
 	'bambi-unfair-old', 'cockey', 'old-cockey', 'older-cockey', 'pissey', 'old-pissey', 'shartey-playable'];
 
 	var storyDifficultyText:String = "";
@@ -5807,7 +5807,7 @@ class PlayState extends MusicBeatState
 						if (modchartoption) CharacterSelectState.unlockCharacter('bambi-unfair');
 						if (modchartoption) CharacterSelectState.unlockCharacter('bambi-unfair-old');
 					case "exploitation":
-						if (modchartoption) CharacterSelectState.unlockCharacter('expunged-playable');
+						if (modchartoption) CharacterSelectState.unlockCharacter('expunged');
 					case "furiosity":
 						CharacterSelectState.unlockCharacter('furiosity-dave');
 						CharacterSelectState.unlockCharacter('furiosity-dave-alpha-4');

@@ -35,7 +35,7 @@ class Note extends FlxSprite
 
 	private var CharactersWith3D:Array<String> = ['dave-angey', 'bambi-3d', 'expunged', 'bambi-unfair', 'exbungo',
 	'dave-festival-3d', 'dave-3d-recursed', 'bf-3d', 'nofriend', 'dave-angey-old', 'dave-insanity-3d', 'dave-3d-standing-bruh-what',
-	'furiosity-dave', 'furiosity-dave-alpha-4', 'bambi-unfair', 'expunged-playable', 'bambi-3d-scrapped', 'bambi-3d-old',
+	'furiosity-dave', 'furiosity-dave-alpha-4', 'bambi-unfair', 'bambi-3d-scrapped', 'bambi-3d-old',
 	'bambi-unfair-old', 'cockey', 'old-cockey', 'older-cockey', 'pissey', 'old-pissey', 'shartey-playable'];
 
 	public var mania:Int = 0;

@@ -37,7 +37,7 @@ class GameOverPolygonizedSubState extends MusicBeatSubstate
 			case 'dave-angey' | 'dave-3d-recursed' | 'furiosity-dave' | 'furiosity-dave-alpha-4' | 'dave-angey-old' | 'dave-insanity-3d' | 'dave-3d-standing-bruh-what':
 				deathSuffix = '-dave';
 				bgSuffix = 'void/redsky';
-			case 'bambi-3d' | 'bambi-unfair' | 'expunged-playable' | 'bambi-3d-scrapped' | 'bambi-3d-old' | 'bambi-unfair-old' | 'bambi-3d-recursed':
+			case 'bambi-3d' | 'bambi-unfair' | 'expunged' | 'bambi-3d-scrapped' | 'bambi-3d-old' | 'bambi-unfair-old' | 'bambi-3d-recursed':
 				deathSuffix = '-bambi';
 				bgSuffix = 'cheating/cheater';
 		}
