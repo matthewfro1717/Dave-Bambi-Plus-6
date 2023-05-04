@@ -432,7 +432,7 @@ class MainMenuState extends MusicBeatState
 					switch (optionShit[curSelected])
 					{
 						case 'discord':
-							fancyOpenURL("https://discord.gg/svcNgRr6");
+							fancyOpenURL("https://discord.gg/UCKcZbu2Up");
 					}
 				}
 				else
