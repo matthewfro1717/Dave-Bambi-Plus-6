@@ -380,7 +380,7 @@ class FreeplayState extends MusicBeatState
 			case 'extras':
 				if (FlxG.save.data.recursedUnlocked)
 					addWeek(['Recursed'], 10, ['recurser']);
-			    addWeek(['Bonus-Song'], 1, ['dave']);
+			    addWeek(['Bonus-Song', 'Roots'], 1, ['dave', 'dave']);
 				addWeek(['Bot-Trot'], 9, ['playrobot']);
 				addWeek(['Escape-From-California'], 11, ['moldy']);
 				addWeek(['Five-Nights'], 12, ['dave']);
