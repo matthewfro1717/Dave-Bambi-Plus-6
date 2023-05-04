@@ -181,7 +181,7 @@ class CharacterSelectState extends MusicBeatState
 		new CharacterInSelect('[Data_Expunged]', [0, 3, 0, 0], [
 			new CharacterForm('bambi-3d', 'Expunged', [0, 3, 0, 0], '3D'),
 			new CharacterForm('bambi-unfair', 'Expunged (Unfair From)', [0, 3, 0, 0], '3D'),
-			new CharacterForm('expunged-playable', 'Expunged (True Form)', [0, 3, 0, 0], '3D'),
+			new CharacterForm('expunged', 'Expunged (True Form)', [0, 3, 0, 0], '3D'),
 			new CharacterForm('bambi-3d-scrapped', 'Expunged (Scrapped 3.0)', [0, 3, 0, 0], '3D'),
 			new CharacterForm('bambi-3d-old', 'Old Expunged', [0, 3, 0, 0], '3D'),
 			new CharacterForm('bambi-unfair-old', 'Old Expunged (Unfair From)', [0, 3, 0, 0], '3D'),
