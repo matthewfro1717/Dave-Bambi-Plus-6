@@ -4821,7 +4821,7 @@ class PlayState extends MusicBeatState
 						FlxG.switchState(new PlayState());
 					}));
 					return;
-				case 'cheating':
+				case 'cheating' | 'rigged' :
 					FlxG.switchState(new TerminalCheatingState([
 						new TerminalText(0, [['Warning: ', 1], ['Chart Editor access detected', 1],]),
 						new TerminalText(200, [['run AntiCheat.dll', 3]]),
@@ -4865,7 +4865,7 @@ class PlayState extends MusicBeatState
 					DiscordClient.changePresence("I have your IP address", null, null, true);
 					#end
 					return;
-				case 'exploitation' | 'master':
+				case 'exploitation' | 'master' | 'vs-dave-thanksgiving'| 'importumania' | 'secret-mod-leak' | 'secret':
 					health = 0;
 				case 'recursed':
 					ChartingState.hahaFunnyRecursed();
