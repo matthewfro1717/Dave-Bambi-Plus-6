@@ -906,7 +906,7 @@ class PlayState extends MusicBeatState
 		dad = new Character(100, 450, SONG.player2);
 		switch (SONG.song.toLowerCase())
 		{
-			case 'insanity':
+			case 'insanity' | 'insanity-2.5':
 				dadmirror = new Character(100, 200, "dave-angey");
 				dadmirror.visible = false;
 		}
@@ -1562,7 +1562,7 @@ class PlayState extends MusicBeatState
 		}
 		switch (curSong.toLowerCase())
 		{
-			case 'insanity':
+			case 'insanity' | 'insanity-2.5':
 				preload('backgrounds/void/redsky');
 				preload('backgrounds/void/redsky_insanity');
 			case 'polygonized':
@@ -1920,7 +1920,7 @@ class PlayState extends MusicBeatState
 				sprites.add(stageFront);
 				add(stageFront);
 
-				if (SONG.song.toLowerCase() == 'insanity' || localFunny == CharacterFunnyEffect.Recurser)
+				if (SONG.song.toLowerCase() == 'insanity' || SONG.song.toLowerCase() == 'insanity-2.5' || localFunny == CharacterFunnyEffect.Recurser)
 				{
 					var bg:BGSprite = new BGSprite('bg', -600, -200, Paths.image('backgrounds/void/redsky_insanity'), null, 1, 1, true, true);
 					bg.alpha = 0.75;
@@ -5990,7 +5990,7 @@ class PlayState extends MusicBeatState
 			{	if(FlxG.save.data.freeplayCuts){
 				switch (SONG.song.toLowerCase())
 				{
-					case 'insanity':
+					case 'insanity' | 'insanity-2.5':
 						canPause = false;
 						FlxG.sound.music.volume = 0;
 						vocals.volume = 0;
@@ -9016,7 +9016,7 @@ class PlayState extends MusicBeatState
 						sexDad = new Character(dad.x - 700, dad.y, "older-cockey");
 						add(sexDad);
 						dad.alpha = 0;
-					case 823:
+					case 842:
 						switchDad('old-pissey', dad.getPosition(), false);
 						dad.alpha = 0;
 						FlxTween.tween(dad, {alpha: 1}, 5);

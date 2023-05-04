@@ -1761,16 +1761,17 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHT', 'right', 24, false);
 				animation.addByPrefix('singDOWN', 'down', 24, false);
 				animation.addByPrefix('singLEFT', 'left', 24, false);
-		
+			
 				loadOffsetFile(curCharacter);
-				
+					
 				barColor = FlxColor.fromRGB(255, 206, 11);
 				globalOffset = [-30, -350];
-
+				
+	
 				setGraphicSize(Std.int(width * 0.5));
 				updateHitbox();
 				antialiasing = false;
-		
+			
 				playAnim('idle');
 
 			case 'old-pooper':
