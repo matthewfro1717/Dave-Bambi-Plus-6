@@ -36,7 +36,7 @@ class Note extends FlxSprite
 	private var CharactersWith3D:Array<String> = ['dave-angey', 'bambi-3d', 'expunged', 'bambi-unfair', 'exbungo',
 	'dave-festival-3d', 'dave-3d-recursed', 'bf-3d', 'nofriend', 'dave-angey-old', 'dave-insanity-3d', 'dave-3d-standing-bruh-what',
 	'furiosity-dave', 'furiosity-dave-alpha-4', 'bambi-unfair', 'bambi-3d-scrapped', 'bambi-3d-old',
-	'bambi-unfair-old', 'cockey', 'old-cockey', 'older-cockey', 'pissey', 'old-pissey', 'shartey-playable'];
+	'bambi-unfair-old', 'cockey', 'old-cockey', 'older-cockey', 'pissey', 'old-pissey', 'shartey'];
 
 	public var mania:Int = 0;
 
@@ -331,9 +331,10 @@ class Note extends FlxSprite
 			if (state.localFunny == CharacterFunnyEffect.Dave)
 			{
 				str = 'cheating';
+				str = 'rigged';
 			}
 		}
-		if (str == 'cheating' && PlayState.modchartoption) {
+		if (str == 'cheating' || str == 'rigged' && PlayState.modchartoption) {
 			if (mania == 0) {
 				switch (originalType)
 				{
@@ -400,7 +401,7 @@ class Note extends FlxSprite
 		}
 		if (!isSustainNote) {
 			if (!PlayState.modchartoption) {
-				if (PlayState.SONG.song.toLowerCase() == 'cheating')
+				if (PlayState.SONG.song.toLowerCase() == 'cheating' || PlayState.SONG.song.toLowerCase() == 'rigged')
 					LocalScrollSpeed = 0.75; // target practice old
 				if (PlayState.SONG.song.toLowerCase() == 'kabunga')
 					LocalScrollSpeed = 0.81;

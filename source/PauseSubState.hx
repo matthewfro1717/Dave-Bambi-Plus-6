@@ -268,7 +268,7 @@ class PauseSubState extends MusicBeatSubstate
 			case "No Miss Mode":
 				PlayState.instance.noMiss = !PlayState.instance.noMiss;
 				var nm = PlayState.SONG.song.toLowerCase();
-				if (['exploitation', 'cheating', 'unfairness', 'recursed', 'glitch', 'master', 'supernovae'].contains(nm))
+				if (['exploitation', 'cheating',  'rigged', 'unfairness', 'recursed', 'glitch', 'master', 'supernovae', 'secret', 'secret-mod-leak', 'importumania'].contains(nm))
 				{
 					PlayState.instance.health = 0;
 					close();

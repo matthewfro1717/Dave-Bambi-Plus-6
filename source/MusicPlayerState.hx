@@ -110,9 +110,6 @@ class MusicPlayerState extends MusicBeatState
         bg.color = 0xFFFD719B;
 		add(bg);
 
-		grpSongs = new FlxTypedGroup<Alphabet>();
-		add(grpSongs);
-
         gradientBar = FlxGradient.createGradientFlxSprite(Math.round(FlxG.width), 512, [0x00ff0000, 0x558DE7E5, 0xAAE6F0A9], 1, 90, true);
 		gradientBar.y = FlxG.height - gradientBar.height;
 		add(gradientBar);
@@ -122,6 +119,9 @@ class MusicPlayerState extends MusicBeatState
 		add(checker);
 		checker.scrollFactor.set(0, 0.07);
 		checker.antialiasing = FlxG.save.data.globalAntialiasing;
+
+		grpSongs = new FlxTypedGroup<Alphabet>();
+		add(grpSongs);
 
         #if desktop
         DiscordClient.changePresence("In the OST Menu", null);

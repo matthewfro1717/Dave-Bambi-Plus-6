@@ -96,6 +96,8 @@ class CreditsPopUp extends FlxSpriteGroup
 				songCreator = 'Ms. That Pizza Tower Fan';
 			case 'bonkers':
 				songCreator = 'Cynda';
+			case 'rigged':
+				songCreator = 'pixe';
 		}
 		switch (PlayState.storyWeek)
 		{

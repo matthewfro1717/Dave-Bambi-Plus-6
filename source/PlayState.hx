@@ -733,7 +733,7 @@ class PlayState extends MusicBeatState
 			switch(SONG.song.toLowerCase())
 			{
 				case 'house' | 'insanity' | 'supernovae' | 'old-supernovae' | 'warmup' | 'threedimensional' | 'second-tristan-song' |
-				'house-2.5' | 'insanity-2.5' | 'roots':
+				'house-2.5' | 'insanity-2.5' | 'roots' | 'vs-dave-thanksgiving':
 					stageCheck = 'house';
 				case 'polygonized' | 'polygonized-2.5' | 'furiosity':
 					stageCheck = 'red-void';
@@ -791,8 +791,6 @@ class PlayState extends MusicBeatState
 					stageCheck = 'garrettLand';
 				case 'old-blocked' | 'Old-Corn-Theft' | 'old-maze':
 					stageCheck = 'old-farm';
-				case 'vs-dave-thanksgiving':
-					stageCheck = 'house-2.5';
 				case 'blocked-2.5' | 'corn-theft-2.5':
 					stageCheck = 'scrapped-farm';
 				case 'maze-2.5':
@@ -819,6 +817,14 @@ class PlayState extends MusicBeatState
 				for (bgSprite in revertedBG)
 				{
 					bgSprite.color = getBackgroundColor(SONG.song.toLowerCase() != 'interdimensional' ? 'daveHouse_night' : 'festival');
+					bgSprite.alpha = 0;
+				}
+			case 'polygonized-2.5':
+				var stage = 'house-night';
+				revertedBG = createBackgroundSprites(stage, true);
+				for (bgSprite in revertedBG)
+				{
+					bgSprite.color = getBackgroundColor('daveHouse_night');
 					bgSprite.alpha = 0;
 				}
 		}
@@ -1077,6 +1083,15 @@ class PlayState extends MusicBeatState
 			}
 		}
 
+		if (darkLevels.contains(curStage) && SONG.song.toLowerCase() != "polygonized-2.5")
+		{
+			dad.color = nightColor;
+			gf.color = nightColor;
+			if (!formoverride.startsWith('tristan-golden')) {
+				boyfriend.color = nightColor;
+			}
+		}
+
 		if (sunsetLevels.contains(curStage))
 		{
 			dad.color = sunsetColor;
@@ -1091,6 +1106,11 @@ class PlayState extends MusicBeatState
 			dadGroup.add(dadmirror);
 		}
 		bfGroup.add(boyfriend);
+
+		if(SONG.song.toLowerCase() == "rigged")
+			{
+				health = 1.75;
+			}
 
 		isShaggy = boyfriend.curCharacter == 'shaggy' || boyfriend.curCharacter == 'supershaggy' || boyfriend.curCharacter == 'godshaggy' || boyfriend.curCharacter == 'redshaggy';
 
@@ -1433,7 +1453,7 @@ class PlayState extends MusicBeatState
 				credits = LanguageManager.getTextString('glitch_credit');
 			case 'unfairness':
 				credits = LanguageManager.getTextString('unfairness_credit');
-			case 'cheating':
+			case 'cheating' | 'rigged':
 				if (!modchartoption) credits = LanguageManager.getTextString('cheating_nomod_credit');
 				else credits = LanguageManager.getTextString('cheating_credit');
 			case 'exploitation':
@@ -1565,7 +1585,7 @@ class PlayState extends MusicBeatState
 			case 'insanity' | 'insanity-2.5':
 				preload('backgrounds/void/redsky');
 				preload('backgrounds/void/redsky_insanity');
-			case 'polygonized':
+			case 'polygonized' | 'polygonized-2.5':
 				preload('characters/3d_bf');
 				preload('characters/3d_gf');
 			case 'maze' | 'indignancy':
@@ -4082,7 +4102,7 @@ class PlayState extends MusicBeatState
 		noteWidth = 156 * Note.scales[mania];
 
 		if (modchartoption) {
-			if ((SONG.song.toLowerCase() == 'cheating' || localFunny == CharacterFunnyEffect.Dave) && !inCutscene) // fuck you
+			if ((SONG.song.toLowerCase() == 'cheating' || SONG.song.toLowerCase() == 'rigged' || localFunny == CharacterFunnyEffect.Dave) && !inCutscene) // fuck you
 			{
 				var num:Float = 1.5;
 				if (mania == 2) num = 1.4;
@@ -4817,6 +4837,26 @@ class PlayState extends MusicBeatState
 						isStoryMode = false;
 						PlayState.storyWeek = 14;
 						FlxG.save.data.cheatingFound = true;
+						FlxG.switchState(new PlayState());
+					}));
+					return;
+				case 'vs-dave-thanksgiving':
+					FlxG.switchState(new TerminalCheatingState([
+						new TerminalText(0, [['Warning: ', 1], ['Chart Editor access detected', 1],]),
+						new TerminalText(200, [['run AntiCheat.dll', 0.5]]),
+						new TerminalText(0, [['ERROR: File currently being used by another process. Retrying in 3...', 3]]),
+						new TerminalText(200, [['File no longer in use, running AntiCheat.dll..', 2]]),
+					], function()
+					{
+						shakeCam = false;
+						#if SHADERS_ENABLED
+						screenshader.Enabled = false;
+						#end
+
+						isStoryMode = false;
+						PlayState.SONG = Song.loadFromJson("rigged"); // you dun fucked up again
+						isStoryMode = false;
+						PlayState.storyWeek = 14;
 						FlxG.save.data.riggedFound = true;
 						FlxG.switchState(new PlayState());
 					}));
@@ -4865,7 +4905,7 @@ class PlayState extends MusicBeatState
 					DiscordClient.changePresence("I have your IP address", null, null, true);
 					#end
 					return;
-				case 'exploitation' | 'master' | 'vs-dave-thanksgiving'| 'importumania' | 'secret-mod-leak' | 'secret':
+				case 'exploitation' | 'master' | 'importumania' | 'secret-mod-leak' | 'secret':
 					health = 0;
 				case 'recursed':
 					ChartingState.hahaFunnyRecursed();
@@ -5309,7 +5349,7 @@ class PlayState extends MusicBeatState
 
 					switch (SONG.song.toLowerCase())
 					{
-						case 'cheating':
+						case 'cheating' | 'rigged':
 							health -= healthtolower;
 						case 'unfairness':
 							var healthadj = 3;
@@ -5336,16 +5376,6 @@ class PlayState extends MusicBeatState
 								health = 0.001;
 							}
 						case 'importumania':
-							if (FlxG.save.data.healthdrain && health > 0.2)
-							{
-								if (!daNote.isSustainNote)
-									health -= 0.01725;
-								else
-									health -= 0.003;
-								if (health < 0.2)
-									health = 0.2;
-							}
-
 							if (unfairPart){
 								var healthadj = 3;
 								switch (storyDifficulty) {
@@ -5743,7 +5773,7 @@ class PlayState extends MusicBeatState
 
 		FlxG.sound.music.volume = 0;
 		vocals.volume = 0;
-		if (SONG.validScore && !botPlay && !(!modchartoption && (SONG.song.toLowerCase() == 'cheating' || SONG.song.toLowerCase() == 'unfairness' || SONG.song.toLowerCase() == 'kabunga' || localFunny == CharacterFunnyEffect.Exbungo || localFunny == CharacterFunnyEffect.Recurser || SONG.song.toLowerCase() == 'exploitation')))
+		if (SONG.validScore && !botPlay && !(!modchartoption && (SONG.song.toLowerCase() == 'cheating' || SONG.song.toLowerCase() == 'rigged' || SONG.song.toLowerCase() == 'unfairness' || SONG.song.toLowerCase() == 'kabunga' || localFunny == CharacterFunnyEffect.Exbungo || localFunny == CharacterFunnyEffect.Recurser || SONG.song.toLowerCase() == 'exploitation')))
 		{
 			trace("score is valid");
 
@@ -5788,6 +5818,11 @@ class PlayState extends MusicBeatState
 						CharacterSelectState.unlockCharacter('dave-1.0');
 						CharacterSelectState.unlockCharacter('dave-alpha-4');
 						CharacterSelectState.unlockCharacter('dave-alpha');
+					case "insanity-2.5":
+						CharacterSelectState.unlockCharacter('dave-annoyed');
+						CharacterSelectState.unlockCharacter('dave-annoyed-2.5');
+						CharacterSelectState.unlockCharacter('dave-annoyed-2.1');
+						CharacterSelectState.unlockCharacter('dave-annoyed-2.0');
 					case "old-splitathon":
 						CharacterSelectState.unlockCharacter('dave-splitathon-2.0');
 						CharacterSelectState.unlockCharacter('dave-splitathon-1.0');
@@ -7218,6 +7253,27 @@ class PlayState extends MusicBeatState
 				}
 				boyfriend.color = bfTween.color;
 			}
+
+			if (darkLevels.contains(curStage) && SONG.song.toLowerCase() != "polygonized-2.5" && formoverride != 'tristan-golden-glowing' && bfTween == null)
+				{
+					boyfriend.color = nightColor;
+				}
+				else if (sunsetLevels.contains(curStage) && bfTween == null)
+				{
+					boyfriend.color = sunsetColor;
+				}
+				else if (bfTween == null)
+				{
+					boyfriend.color = FlxColor.WHITE;
+				}
+				else
+				{
+					if (!bfTween.active && !bfTween.finished)
+					{
+						bfTween.active = true;
+					}
+					boyfriend.color = bfTween.color;
+				}
 
 
 			switch (note.noteStyle)
@@ -10740,6 +10796,10 @@ class PlayState extends MusicBeatState
 						case 1664:
 							switchNoteScroll(false);
 						case 1668:
+							if (mania == 5)
+								switchNotePositions([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]);
+							else
+								switchNotePositions([0,1,2,3,4,5,6,7]);
 							switchNoteScroll(false);
 						case 2120:
 							if (mania == 5)
@@ -11200,6 +11260,26 @@ class PlayState extends MusicBeatState
 					}
 					boyfriend.color = bfTween.color;
 				}
+				if (darkLevels.contains(curStage) && (SONG.song.toLowerCase() != "polygonized-2.5" || (SONG.song.toLowerCase() == "polygonized-2.5" && curBeat >= 608)) && formoverride != 'tristan-golden-glowing' && bfTween == null)
+					{
+						boyfriend.color = nightColor;
+					}
+					else if(sunsetLevels.contains(curStage) && bfTween == null)
+					{
+						boyfriend.color = sunsetColor;
+					}
+					else if (bfTween == null)
+					{
+						boyfriend.color = FlxColor.WHITE;
+					}
+					else
+					{
+						if (!bfTween.active && !bfTween.finished)
+						{
+							bfTween.active = true;
+						}
+						boyfriend.color = bfTween.color;
+					}
 			}
 		}
 

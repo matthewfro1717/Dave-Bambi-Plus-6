@@ -485,6 +485,8 @@ class Character extends FlxSprite
 	
 				globalOffset = [0, 0];
 
+				nativelyPlayable = true;
+
 				loadOffsetFile(curCharacter + (isPlayer ? '-playable' : ''));
 								
 				barColor = FlxColor.fromRGB(168, 236, 236);
@@ -628,7 +630,7 @@ class Character extends FlxSprite
 		
 				loadOffsetFile(curCharacter + (isPlayer ? '-playable' : ''));
 				
-				globalOffset = [0, -340];
+				globalOffset = [0, -250];
 				
 				barColor = FlxColor.fromRGB(249, 180, 207);
 
@@ -711,7 +713,7 @@ class Character extends FlxSprite
 				animation.addByPrefix('what', 'bruh', 24, true);
 				animation.addByPrefix('happy', 'happy', 24, true);
 
-				loadOffsetFile(curCharacter);
+				loadOffsetFile(curCharacter + (isPlayer ? '-playable' : ''));
 				globalOffset = [0, -180];
 
 				barColor = FlxColor.fromRGB(15, 95, 255);
@@ -1008,7 +1010,7 @@ class Character extends FlxSprite
 				{
 					animation.addByPrefix('sing${anim.toUpperCase()}', 'splitathon $anim', 24, false);
 				}
-				loadOffsetFile(curCharacter);
+				loadOffsetFile(curCharacter + (isPlayer ? '-playable' : ''));
 
 				globalOffset = [30, 85];
 				
@@ -1095,7 +1097,7 @@ class Character extends FlxSprite
 				barColor = FlxColor.fromRGB(37, 191, 55);
 				globalOffset = [37, 90];
 				
-				loadOffsetFile(curCharacter);
+				loadOffsetFile(curCharacter + (isPlayer ? '-playable' : ''));
 
 				playAnim('idle');
 			case 'bambi-angey-old':
@@ -1244,7 +1246,7 @@ class Character extends FlxSprite
 				globalOffset = [0, -260];
 				barColor = FlxColor.fromRGB(178, 7, 7);
 
-				loadOffsetFile(curCharacter);
+				loadOffsetFile(curCharacter + (isPlayer ? '-playable' : ''));
 				
 				antialiasing = false;
 				
@@ -1806,7 +1808,7 @@ class Character extends FlxSprite
 
 				barColor = FlxColor.fromRGB(228, 85, 81);
 
-				globalOffset = [-30, -350];
+				globalOffset = [-200, -300];
 				setGraphicSize(Std.int(width * 2));
 				updateHitbox();
 				antialiasing = false;
@@ -1825,9 +1827,11 @@ class Character extends FlxSprite
 				//loadOffsetFile(curCharacter + (isPlayer ? '-playable' : ''));
 				loadOffsetFile(curCharacter);
 
+				// joke ass charashit
+
 				barColor = FlxColor.fromRGB(228, 85, 81);
 
-				globalOffset = [-30, -350];
+				globalOffset = [130, -130];
 				setGraphicSize(Std.int(width * 2));
 				updateHitbox();
 				antialiasing = false;
@@ -1868,36 +1872,15 @@ class Character extends FlxSprite
 				animation.addByPrefix('singLEFT', 'Shartey left', 24, false);
 				animation.addByPrefix('singDOWN-alt', 'Shartey alt-down', 24, false);
 			
-				loadOffsetFile(curCharacter);					
+				loadOffsetFile(curCharacter + (isPlayer ? '-playable' : ''));				
 				barColor = FlxColor.fromRGB(104, 191, 202);
-				globalOffset = [-30, -350];
+				globalOffset = [0, -150];
 	
 				setGraphicSize(Std.int(width * 1.65));
 				updateHitbox();
 				antialiasing = false;
 			
 				playAnim('idle');
-
-			case 'shartey-playable':
-				var tex = Paths.getSparrowAtlas('eletric-cockadoodledoo/characters/Shartey', 'shared');
-				frames = tex;
-				animation.addByPrefix('idle', 'Shartey idle', 24, false);
-				animation.addByPrefix('singUP', 'Shartey up', 24, false);
-				animation.addByPrefix('singRIGHT', 'Shartey right', 24, false);
-				animation.addByPrefix('singDOWN', 'Shartey down', 24, false);
-				animation.addByPrefix('singLEFT', 'Shartey left', 24, false);
-				animation.addByPrefix('singDOWN-alt', 'Shartey alt-down', 24, false);
-						
-				loadOffsetFile(curCharacter);
-				barColor = FlxColor.fromRGB(104, 191, 202);
-				globalOffset = [150, -260];
-	
-				setGraphicSize(Std.int(width * 1.65));
-				updateHitbox();
-				antialiasing = false;
-			
-				playAnim('idle');
-
 			case 'pooper':
 				var tex = Paths.getSparrowAtlas('eletric-cockadoodledoo/characters/Pooper', 'shared');
 				frames = tex;
@@ -1966,7 +1949,7 @@ class Character extends FlxSprite
 
 				barColor = FlxColor.fromRGB(116, 117, 133);
 
-				globalOffset = [-100, -400];
+				globalOffset = [-150, -400];
 	
 				playAnim('idle');
 
@@ -2081,6 +2064,8 @@ class Character extends FlxSprite
 
 				loadOffsetFile(curCharacter);
 
+				globalOffset = [50, 0];
+
 				skins.set('gfSkin', 'stereo');
 				skins.set('recursed', 'tb-recursed');
 
@@ -2110,6 +2095,7 @@ class Character extends FlxSprite
 				animation.addByPrefix('scared', 'BF idle shaking', 24);
 
 				loadOffsetFile(curCharacter);
+				globalOffset = [50, 0];
 
 				flipX = true;
 				barColor = FlxColor.WHITE;
@@ -2191,7 +2177,7 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHT', 'longnosejohn right', 24, false);
 				animation.addByPrefix('singDOWN', 'longnosejohn down', 24, false);
 				animation.addByPrefix('singLEFT', 'longnosejohn left', 24, false);
-				globalOffset = [-50, -420];
+				globalOffset = [-200, -420];
 
 				loadOffsetFile(curCharacter);
 				barColor = FlxColor.fromRGB(0, 127, 14);

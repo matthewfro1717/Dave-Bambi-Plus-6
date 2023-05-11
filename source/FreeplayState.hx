@@ -402,8 +402,6 @@ class FreeplayState extends MusicBeatState
 			case 'fanmade':
 				addWeek(['Blitz', 'No-Legs'], 1, ['dave-annoyed', 'dave']);
 				addWeek(['Duper'], 2, ['bambi-angey', 'bambi-new']);
-				if (FlxG.save.data.riggedFound) // i will add it back
-					addWeek(['Rigged'], 14, ['bambi-3d']);
 				if (FlxG.save.data.importumaniaFound)
 					addWeek(['Importumania'], 14, ['importumania']);
 			case 'cover':
@@ -415,6 +413,8 @@ class FreeplayState extends MusicBeatState
 			case 'terminal':
 				if (FlxG.save.data.cheatingFound)
 					addWeek(['Cheating'], 14, ['bambi-3d']);
+				if (FlxG.save.data.riggedFound) // is back now
+					addWeek(['Rigged'], 14, ['bambi-3d']);
 				if (FlxG.save.data.unfairnessFound)
 					addWeek(['Unfairness'], 15, ['bambi-unfair']);
 				if (FlxG.save.data.exploitationFound)
