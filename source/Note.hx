@@ -275,7 +275,7 @@ class Note extends FlxSprite
 				setGraphicSize(Std.int(width * 0.7));
 				updateHitbox();
 				antialiasing = true;
-			case 'phone' | 'phone-alt':
+			case 'phone' | 'phone-zardy' | 'phone-alt':
 				if (!isSustainNote)
 				{
 					frames = Paths.getSparrowAtlas('notes/NOTE_phone', 'shared');
