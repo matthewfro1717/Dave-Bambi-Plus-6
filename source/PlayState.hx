@@ -5283,7 +5283,7 @@ class PlayState extends MusicBeatState
 					{
 						case 'phone':
 							dad.playAnim('singSmash', true);
-						case 'phone-zardy':
+						if (SONG.song.toLowerCase() != "foolhardy")
 							boyfriend.playAnim('singSmash', true);
 						default:
 							if (daNote.noteStyle == 'phone-alt') { // I didn't notice bambi's alt animation has only left and right
