@@ -7024,7 +7024,7 @@ class PlayState extends MusicBeatState
 						return;
 					case 'phone-zardy':
 						var Animation:Bool = boyfriend.animation.getByName("singSmash") != null;
-						boyfriend.playAnim(boyfriend.animation.getByName("singSmash") == null ? 'singSmash', true);
+						boyfriend.playAnim(boyfriend.animation.getByName("singSmash") == null ? 'singSmash' : 'singSmash', true);
 						return;
 				}
 			}
