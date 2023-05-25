@@ -123,6 +123,8 @@ class Note extends FlxSprite
 		{
 			case 'phone':
 				notePathLol = 'notes/NOTE_phone';
+			case 'phone-zardy':
+				notePathLol = 'notes/NOTE_phone';
 			case 'shape':
 				notePathLol = 'notes/NOTE_assets_Shape';
 		}
