@@ -123,8 +123,6 @@ class Note extends FlxSprite
 		{
 			case 'phone':
 				notePathLol = 'notes/NOTE_phone';
-			case 'phone-zardy':
-				notePathLol = 'notes/NOTE_phone';
 			case 'shape':
 				notePathLol = 'notes/NOTE_assets_Shape';
 		}
@@ -277,7 +275,7 @@ class Note extends FlxSprite
 				setGraphicSize(Std.int(width * 0.7));
 				updateHitbox();
 				antialiasing = true;
-			case 'phone' | 'phone-zardy' | 'phone-alt':
+			case 'phone' | 'phone-alt':
 				if (!isSustainNote)
 				{
 					frames = Paths.getSparrowAtlas('notes/NOTE_phone', 'shared');
