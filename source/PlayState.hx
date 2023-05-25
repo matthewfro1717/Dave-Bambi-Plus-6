@@ -5283,7 +5283,7 @@ class PlayState extends MusicBeatState
 					{
 						case 'phone':
 							dad.playAnim('singSmash', true);
-						if (SONG.song.toLowerCase() != "foolhardy")
+						case 'phone-zardy':
 							boyfriend.playAnim('singSmash', true);
 						default:
 							if (daNote.noteStyle == 'phone-alt') { // I didn't notice bambi's alt animation has only left and right
@@ -7021,6 +7021,10 @@ class PlayState extends MusicBeatState
 						pauseTweens.push(noteTween);
 						health -= 0.07;
 						updateAccuracy();
+						return;
+					case 'phone-zardy':
+						var Animation:Bool = boyfriend.animation.getByName("singSmash") != null;
+						boyfriend.playAnim(boyfriend.animation.getByName("singSmash") == null ? 'singSmash', true);
 						return;
 				}
 			}
