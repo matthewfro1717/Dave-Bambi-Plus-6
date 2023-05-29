@@ -231,6 +231,18 @@ exploit_sub2==Ha ha haaaaaa hoo?
 exploit_sub3==Isso diz você?
 exploit_sub4==Ha ha, ha
 
+//Cozen Subtitles//
+cozen_sub1==Ai meu deus eu te odeio pra caralho
+cozen_sub2==Foda-se ahh eu te odeio tanto.
+cozen_sub3==Te odeio...
+cozen_sub4==Verifique o seu armário que eu te dei-
+cozen_sub5==Um novo...
+cozen_sub6==Eh jogo...
+cozen_sub7==ISSO POR QUE eu não sei o que é isso.
+cozen_sub8==Verifique seu armário, estou dando isso ...
+cozen_sub9==O jogo legal que este
+cozen_sub10==Toc Toc!
+
 // Cheating Subtitles //
 cheating_sub1==Eu bloquear você.
 cheating_sub2==Você é monstro.
