@@ -2564,7 +2564,7 @@ class PlayState extends MusicBeatState
 				{
 					FlxG.mouse.visible = true;
 					var redPortal = new BGSprite('redPortal', -30, 550, 'backgrounds/void/redPortal', [], 1, 1, true, true);
-					redPortal.setGraphicSize(Std.int(redPortal.width * 0.36));
+					redPortal.setGraphicSize(Std.int(redPortal.width * 1));
 					redPortal.animation.play('idle');
 					redPortal.updateHitbox();
 				}
