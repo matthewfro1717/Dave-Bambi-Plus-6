@@ -61,8 +61,8 @@ class CreditsPopUp extends FlxSpriteGroup
 				songCreatorIcon = 'ArchWk';
 			case 'vs-dave-rap' | 'vs-dave-rap-two':
 				songCreator = 'Your mom';
-			case 'recursed' | 'blitz' | 'duper':
-				songCreator = 'Aadsta';
+				case 'recursed' | 'blitz' | 'duper':
+					songCreator = 'Aadsta';
 			case 'cozen':
 				songCreator = 'Villezen';
 			case 'adventure':
@@ -156,7 +156,8 @@ class CreditsPopUp extends FlxSpriteGroup
 			case 'interdimensional':
 				headingPath = {path: 'songHeadings/interdimensionalHeading', antiAliasing: false, iconOffset: 0};
 			case 'cozen':
-		                headingPath = {path: 'songHeadings/unfairHeading', antiAliasing: true,
+		       		headingPath = {path: 'songHeadings/unfairHeading', antiAliasing: true,
+				animation: new Animation('unfair', 'Unfairness', 24, true, [false, false]), iconOffset: 0};
 		}
 		if (PlayState.recursedStaticWeek)
 		{
