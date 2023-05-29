@@ -212,6 +212,18 @@ shred_sub12==Miren sus closets estupidos
 shred_sub13==Eso es todo!
 shred_sub14==Eso es todo!
 
+//Cozen Subtitles//
+cozen_sub1==Oh dios mio, realmente te odio bastante
+cozen_sub2==Mierda, de verdad te odio demasiado
+cozen_sub3==Te odio...
+cozen_sub4==Revisa tu closet, te he dejado
+cozen_sub5==Una nueva
+cozen_sub6==Ehhh... gamimg...
+cozen_sub7==POR ESTA RAZON no se que es esto.
+cozen_sub8==Revisa tu closet, que te he dejado...
+cozen_sub9==Esta gaming increible esta cosa
+cozen_sub10==Knock Knock!
+
 // Exploitation Subtitles //
 exploit_sub1==Que rayos?
 exploit_sub2==Ehhhhhhhhhhhhhhhhhhhhh!!!
