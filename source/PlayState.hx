@@ -753,7 +753,7 @@ class PlayState extends MusicBeatState
 					stageCheck = 'backyard';
 				case 'cheating' | 'oppression' | 'importumania':
 					stageCheck = 'green-void';
-				case 'unfairness':
+				case 'unfairness' | 'cozen':
 					stageCheck = 'glitchy-void';
 				case 'exploitation':
 					stageCheck = 'desktop';
@@ -2558,6 +2558,17 @@ class PlayState extends MusicBeatState
 					hat.updateHitbox();
 					sprites.insert(members.indexOf(circle), hat);
 					insert(members.indexOf(circle), hat);
+				}
+
+				if (['unfairness'].contains(SONG.song.toLowerCase()) && FlxG.random.int(0, 4) == 0)
+				{
+					FlxG.mouse.visible = true;
+					var redPortal = new BGSprite('redPortal', -30, 550, 'backgrounds/void/redPortal', [
+						new Animation('idle', 'redPortal', 24, true, [false, false])
+					], 1, 1, true, true);
+					redPortal.setGraphicSize(Std.int(redPortal.width * 0.36));
+					redPortal.animation.play('idle');
+					redPortal.updateHitbox();
 				}
 				
 				voidShader(bg);
