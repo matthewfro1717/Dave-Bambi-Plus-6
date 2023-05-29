@@ -140,7 +140,8 @@ class FreeplayState extends MusicBeatState
 		'secret-mod-leak',
 		'vs-dave-thanksgiving',
 		'bonkers',
-		'duper'
+		'duper',
+		'cozen'
 	];
 
 	private var camFollow:FlxObject;
@@ -353,6 +354,8 @@ class FreeplayState extends MusicBeatState
 						addWeek(['Cheating'], 14, ['bambi-3d']);
 					if (FlxG.save.data.unfairnessFound)
 						addWeek(['Unfairness'], 15, ['bambi-unfair']);
+					if (FlxG.save.data.cozenFound)
+						addWeek(['Cozen'], 15, ['bambi-unfair']);
 				}
 				if (FlxG.save.data.exbungoFound)
 					addWeek(['Kabunga'], 6, ['exbungo']);
