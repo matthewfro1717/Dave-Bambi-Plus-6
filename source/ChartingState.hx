@@ -1514,6 +1514,7 @@ class ChartingState extends MusicBeatState
 				['cheating', FlxG.save.data.cheatingFound],
 				['oppression', FlxG.save.data.oppressionFound],
 				['cheating', FlxG.save.data.cheatingFound],
+				['cozen', FlxG.save.data.cozenFound],
 				['importumania', FlxG.save.data.importumaniaFound],
 				['rigged', FlxG.save.data.riggedFound],
 				['exploitation', FlxG.save.data.exploitationFound],
