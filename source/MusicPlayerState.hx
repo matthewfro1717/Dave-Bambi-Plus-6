@@ -67,7 +67,7 @@ class MusicPlayerState extends MusicBeatState
         }
         var secretSongs:Array<Dynamic> = [
             ['supernovae', 'bambi-joke'], ['glitch', 'bambi-joke'], ['master', 'bambi-joke', true],
-            ['cheating', 'bambi-3d'], ['unfairness', 'bambi-unfair'], ['exploitation', 'expunged'],
+	    ['cheating', 'bambi-3d'], ['unfairness', 'bambi-unfair'], ['cozen', 'bambi-unfair'], ['exploitation', 'expunged'],
             ['kabunga', 'exbungo'],
             ['bananacore', 'bananacoreicon'], ['eletric-cockadoodledoo', 'old-cicons'], ['electric-cockaldoodledoo', 'electricicons'],
             ['roofs', 'baldi'],
@@ -83,6 +83,7 @@ class MusicPlayerState extends MusicBeatState
                 case 'supernovae', 'glitch', 'master': FlxG.save.data.hasPlayedMasterWeek;
                 case 'cheating':  FlxG.save.data.cheatingFound;
                 case 'unfairness': FlxG.save.data.unfairnessFound;
+                case 'cozen': FlxG.save.data.cozenFound;
                 case 'exploitation': FlxG.save.data.exploitationFound;
                 case 'kabunga': FlxG.save.data.exbungoFound;
                 case 'bananacore', 'eletric-cockadoodledoo', 'electric-cockaldoodledoo': FlxG.save.data.electricCockaldoodledooUnlocked;
