@@ -422,7 +422,8 @@ class FreeplayState extends MusicBeatState
 					addWeek(['Unfairness'], 15, ['bambi-unfair']);
 				if (FlxG.save.data.exploitationFound)
 					addWeek(['Exploitation'], 16, ['expunged']);
-
+				if (FlxG.save.data.cozenFound)
+					addWeek(['Cozen'], 15, ['bambi-unfair']);
 				addWeek(['Enter Terminal'], 17, ['terminal']);
 		}
 	}
