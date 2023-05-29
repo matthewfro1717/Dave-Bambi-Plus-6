@@ -61,8 +61,10 @@ class CreditsPopUp extends FlxSpriteGroup
 				songCreatorIcon = 'ArchWk';
 			case 'vs-dave-rap' | 'vs-dave-rap-two':
 				songCreator = 'Your mom';
-				case 'recursed' | 'blitz' | 'duper':
-					songCreator = 'Aadsta';
+			case 'recursed' | 'blitz' | 'duper':
+				songCreator = 'Aadsta';
+			case 'cozen':
+				songCreator = 'Villezen';
 			case 'adventure':
 				songCreator = 'Ruby';
 			case 'bot-trot':
@@ -98,8 +100,6 @@ class CreditsPopUp extends FlxSpriteGroup
 				songCreator = 'Cynda';
 			case 'rigged':
 				songCreator = 'pixe';
-			case 'cozen':
-				songCreator = 'Villezen';
 		}
 		switch (PlayState.storyWeek)
 		{
