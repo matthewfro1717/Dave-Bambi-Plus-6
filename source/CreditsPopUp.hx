@@ -98,6 +98,8 @@ class CreditsPopUp extends FlxSpriteGroup
 				songCreator = 'Cynda';
 			case 'rigged':
 				songCreator = 'pixe';
+			case 'cozen':
+				songCreator = 'Villezen';
 		}
 		switch (PlayState.storyWeek)
 		{
@@ -153,6 +155,8 @@ class CreditsPopUp extends FlxSpriteGroup
 				headingPath = {path: 'songHeadings/3D-daveHeading', antiAliasing: false, iconOffset: 0};
 			case 'interdimensional':
 				headingPath = {path: 'songHeadings/interdimensionalHeading', antiAliasing: false, iconOffset: 0};
+			case 'cozen':
+		                headingPath = {path: 'songHeadings/unfairHeading', antiAliasing: true,
 		}
 		if (PlayState.recursedStaticWeek)
 		{
