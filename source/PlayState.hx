@@ -2559,15 +2559,6 @@ class PlayState extends MusicBeatState
 					sprites.insert(members.indexOf(circle), hat);
 					insert(members.indexOf(circle), hat);
 				}
-
-				if (['unfairness'].contains(SONG.song.toLowerCase()) && FlxG.random.int(0, 4) == 0)
-				{
-					FlxG.mouse.visible = true;
-					var redPortal = new BGSprite('redPortal', 0, 0, 'backgrounds/void/redPortal', [], 1, 1, true, true);
-					redPortal.setGraphicSize(Std.int(redPortal.width * 1));
-					redPortal.animation.play('idle');
-					redPortal.updateHitbox();
-				}
 				
 				voidShader(bg);
 			case 'rapBattle':
