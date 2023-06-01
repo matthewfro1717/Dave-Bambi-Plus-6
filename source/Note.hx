@@ -424,6 +424,22 @@ class Note extends FlxSprite
 					LocalScrollSpeed = 2;
 				}
 			}
+			if (PlayState.SONG.song.toLowerCase() == 'cozen')
+			{
+				if (PlayState.modchartoption) {
+					var rng:FlxRandom = new FlxRandom();
+					if (rng.int(0, 120) == 1)
+					{
+						LocalScrollSpeed = 0.1;
+					}
+					else
+					{
+						LocalScrollSpeed = rng.float(1, 3);
+					}
+				} else {
+					LocalScrollSpeed = 2;
+				}
+			}
 			if (PlayState.SONG.song.toLowerCase() == 'exploitation')
 			{
 				if (PlayState.modchartoption) {
