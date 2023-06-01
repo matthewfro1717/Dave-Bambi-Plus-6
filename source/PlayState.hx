@@ -7797,7 +7797,7 @@ class PlayState extends MusicBeatState
 					case 2525:
 				                subtitleManager.addSubtitle(LanguageManager.getTextString('cozen_sub8'), 0.02, 1);
 					case 2554:
-				                subtitleManager.addSubtitle(LanguageManager.getTextString('cozen_sub9'), 0.02, 1););
+				                subtitleManager.addSubtitle(LanguageManager.getTextString('cozen_sub9'), 0.02, 1);
 					case 2576:
 					        FlxG.camera.flash(FlxColor.WHITE, 1);
 					        dad.visible = false;
