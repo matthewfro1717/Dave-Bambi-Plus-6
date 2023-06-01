@@ -2504,7 +2504,7 @@ class PlayState extends MusicBeatState
 				if (['unfairness'].contains(SONG.song.toLowerCase()) && FlxG.random.int(0, 4) == 0)
 				{
 					FlxG.mouse.visible = true;
-					var redPortal = new BGSprite('hat', -30, 550, 'backgrounds/void/redPortal', [
+					var redPortal = new BGSprite('hat', -30, 550, 'backgrounds/void/redPortal', [], 1, 1, true, true);
 					redPortal.setGraphicSize(Std.int(hat.width * 0.36));
 					redPortal.updateHitbox();
 				}
