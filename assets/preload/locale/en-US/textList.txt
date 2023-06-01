@@ -173,6 +173,7 @@ glitch_credit==Original Song made by DeadShadow and PixelGH!
 mealie_credit==Original Song made by Alexander Cooper 19!
 overdrive_credit==Original Song made by Top 10 Awesome!
 unfairness_credit==Ghost Tapping is forced off! FUCK YOU!
+cozen_credit==Ghost Tapping is forced off! FUCK YOU!
 cheating_credit==Notes are scrambled! FUCK YOU!
 exploitation_credit==You won't survive
 kabunga_credit==OH MY GOD I JUST DEFLATED
