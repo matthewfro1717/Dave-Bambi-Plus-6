@@ -1453,6 +1453,8 @@ class PlayState extends MusicBeatState
 				credits = LanguageManager.getTextString('glitch_credit');
 			case 'unfairness':
 				credits = LanguageManager.getTextString('unfairness_credit');
+			case 'cozen':
+				credits = LanguageManager.getTextString('cozen_credit');
 			case 'cheating' | 'rigged':
 				if (!modchartoption) credits = LanguageManager.getTextString('cheating_nomod_credit');
 				else credits = LanguageManager.getTextString('cheating_credit');
