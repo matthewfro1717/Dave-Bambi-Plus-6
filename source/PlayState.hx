@@ -8154,8 +8154,8 @@ class PlayState extends MusicBeatState
 								}
 							}
 						}
+	                                }
 				}
-
 			case 'unfairness':
 				switch(curStep)
 				{
@@ -8204,7 +8204,6 @@ class PlayState extends MusicBeatState
 						dad.visible = false;
 						iconP2.visible = false;
 				}
-
 			case 'cozen':
 				switch(curStep)
 				{
