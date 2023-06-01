@@ -4918,6 +4918,8 @@ class PlayState extends MusicBeatState
 					FlxG.switchState(new TerminalCheatingState([
 						new TerminalText(0, [['Warning: ', 1], ['Inteference with an undisclosed varible detected', 1],]),
 						new TerminalText(200, [['Load unfairness.json', 0.5]]),
+						new TerminalText(0, [['ERROR: File is corrupted trying to load an alternative...', 3]]),
+						new TerminalText(200, [['Warning: ', 1],  [['An alternative file has been found.', 2]]),
 						new TerminalText(0, [['ERROR: File is corrupted. trying to load an alternative...', 3]]),
 						new TerminalText(200, [['Warning: ', 1],  [['An alternative file has been found.', 2],]),
 						new TerminalText(200, [['Load cozen.json', 0.5]]),
