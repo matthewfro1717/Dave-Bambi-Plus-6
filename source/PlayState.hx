@@ -8154,8 +8154,8 @@ class PlayState extends MusicBeatState
 								}
 							}
 						}
-	                                }
 				}
+
 			case 'unfairness':
 				switch(curStep)
 				{
