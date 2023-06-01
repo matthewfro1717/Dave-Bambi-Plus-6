@@ -7712,27 +7712,6 @@ class PlayState extends MusicBeatState
 
 		switch (SONG.song.toLowerCase())
 		{
-			case 'cozen':
-	        		switch(curStep)
-				{
-					case 1800:
-						subtitleManager.addSubtitle(LanguageManager.getTextString('cozen_sub10'), 0.02, 0.6);
-				        case 2328:
-				                subtitleManager.addSubtitle(LanguageManager.getTextString('cozen_sub1'), 0.02, 0.6);
-					case 2355:
-				                subtitleManager.addSubtitle(LanguageManager.getTextString('cozen_sub2'), 0.02, 0.6);
-					case 2388:
-				                subtitleManager.addSubtitle(LanguageManager.getTextString('cozen_sub4'), 0.02, 1.5);
-					case 2479:
-				                subtitleManager.addSubtitle(LanguageManager.getTextString('cozen_sub6'), 0.02, 1);
-			                case 2493:
-				                subtitleManager.addSubtitle(LanguageManager.getTextString('cozen_sub7'), 0.02, 1);
-					case 2525:
-				                subtitleManager.addSubtitle(LanguageManager.getTextString('cozen_sub8'), 0.02, 1);
-					case 2554:
-				                subtitleManager.addSubtitle(LanguageManager.getTextString('cozen_sub9'), 0.02, 1););
-				}
-
 			case 'blocked':
 				switch (curStep)
 				{
