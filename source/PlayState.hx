@@ -7731,29 +7731,7 @@ class PlayState extends MusicBeatState
 				                subtitleManager.addSubtitle(LanguageManager.getTextString('cozen_sub8'), 0.02, 1);
 					case 2554:
 				                subtitleManager.addSubtitle(LanguageManager.getTextString('cozen_sub9'), 0.02, 1););
-					case 2576:
-				                defaultCamZoom -= 0.2;
-			                       FlxTween.tween(black, {alpha: 0}, 1);
-				                makeInvisibleNotes(false);
-			        	case 2580:
-						if (modchartoption) {
-							dadStrums.forEach(function(spr:StrumNote)
-							{
-								FlxTween.tween(spr, {alpha: 0}, 6);
-							});
-						}
-			        	case 2590:
-						if (modchartoption) {
-							playerStrums.forEach(function(spr:StrumNote)
-							{
-								FlxTween.tween(spr, {alpha: 0}, 6);
-							});
-						}
-			        	case 2600:
-						FlxG.camera.flash(FlxColor.WHITE, 1);
-						dad.visible = false;
-						iconP2.visible = false;
-					}
+				}
 
 			case 'blocked':
 				switch (curStep)
