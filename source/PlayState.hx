@@ -2503,14 +2503,6 @@ class PlayState extends MusicBeatState
 						weirdBG = bg;
 						stageName = 'unfairness';
 
-				if (['unfairness'].contains(SONG.song.toLowerCase()) && FlxG.random.int(0, 4) == 0)
-				{
-					FlxG.mouse.visible = true;
-					var redPortal = new BGSprite('hat', -30, 550, 'backgrounds/void/redPortal', [], 1, 1, true, true);
-					redPortal.setGraphicSize(Std.int(redPortal.width * 0.36));
-					redPortal.updateHitbox();
-				}
-	
 				case 'banana-hell': // this is a Cockey moment
 					bg.loadGraphic(Paths.image('backgrounds/void/bananaVoid1'));
 					bg.setPosition(-700, -300);
@@ -4916,13 +4908,6 @@ class PlayState extends MusicBeatState
 					DiscordClient.changePresence("I have your IP address", null, null, true);
 					#end
 					return;
-				case 'unfairness':
-					FlxG.switchState(new TerminalCheatingState([
-						new TerminalText(0, [['Warning: ', 1], ['Inteference with an undisclosed varible detected', 1],]),
-						new TerminalText(200, [['Load unfairness.json', 0.5]]),
-						new TerminalText(0, [['ERROR: File is corrupted trying to load an alternative...', 3]]),
-						new TerminalText(0, [['Warning: ', 1],  ['An alternative file has been found.', 2],]),
-						new TerminalText(200, [['Load cozen.json', 0.5]]),
 					], function()
 					{
 						shakeCam = false;
