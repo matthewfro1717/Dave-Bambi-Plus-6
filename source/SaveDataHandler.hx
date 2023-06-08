@@ -80,7 +80,7 @@ class SaveDataHandler
 		if (FlxG.save.data.freeplayCuts == null)
 			FlxG.save.data.freeplayCuts = false;
 
-	    	if (FlxG.save.data.allfreeplaysongsbeat == null)
+	    	if (FlxG.save.data.allfreeplaysongsbeaten == null)
 			FlxG.save.data.freeplayCuts = false;
 	    
 		if (FlxG.save.data.barColors == null)
