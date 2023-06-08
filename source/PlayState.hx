@@ -1960,16 +1960,14 @@ class PlayState extends MusicBeatState
 				if (SONG.song.toLowerCase() == 'mastered' || localFunny == CharacterFunnyEffect.Recurser)
 				{
 					var blue3d:BGSprite = new BGSprite('bg', -275, -200, Paths.image('backgrounds/blue3d'), null, 1, 1, true, true);
-					new Animation('bganimationloop', 'blue3d', 5, true, [false, false])
-				        ], 0.85, 0.85, true, true);
+					new Animation('bganimationloop', 'blue3d', 5, true, [false, false]);
 				        blue3d.animation.play('bganimationloop');
 					blue3d.alpha = 0.75;
 					blue3d.visible = false;
 					add(blue3d);
 					
 					var redbg:BGSprite = new BGSprite('bg', -275, -200, Paths.image('backgrounds/redbg'), null, 1, 1, true, true);
-					new Animation('bganimationloop', 'redbg', 5, true, [false, false])
-				        ], 0.85, 0.85, true, true);
+					new Animation('bganimationloop', 'redbg', 5, true, [false, false]);
 				        redbg.animation.play('bganimationloop');
 					redbg.alpha = 0.75;
 					redbg.visible = false;
