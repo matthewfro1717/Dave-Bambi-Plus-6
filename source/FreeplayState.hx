@@ -231,7 +231,7 @@ class FreeplayState extends MusicBeatState
 				LanguageManager.getTextString('freeplay_classic'),
 				LanguageManager.getTextString('freeplay_cover'),
 				LanguageManager.getTextString('freeplay_fanmade'),
-				LanguageManager.getTextString('freeplay_terminal')
+				LanguageManager.getTextString('freeplay_terminal')];
 		}
 
 		for (i in 0...Catagories.length)
