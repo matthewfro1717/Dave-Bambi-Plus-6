@@ -1965,7 +1965,7 @@ class PlayState extends MusicBeatState
 					gate.color = variantColor;
 					stageFront.color = variantColor;
 				}
-		        case 'mastered'
+		        case 'mastered':
 				var bg:BGSprite = new BGSprite('bg', -600, -300, Paths.image('backgrounds/shared/sky_night'), null, 0.6, 0.6);
 				sprites.add(bg);
 				add(bg);
