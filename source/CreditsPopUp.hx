@@ -40,9 +40,9 @@ class CreditsPopUp extends FlxSpriteGroup
 				'interdimensional' | 'cheating' | 'escape-from-california' | 'five-nights' | 'kabunga' | 'secret' | 'unfairness' | 'rano' | 'master' | 'house-2.5' | 'insanity-2.5' |
 				'polygonized-2.5' | 'blocked-2.5' | 'corn-theft-2.5' | 'maze-2.5' | 'vs-dave-thanksgiving' |'bonus-song-2.5' | 'old-house' | 'old-insanity' | 'furiosity' | 'old-blocked' |
 				'old-maze' | 'old-corn-theft' | 'beta-maze' | 'old-splitathon' | 'roots'| 'threedimensional' | 'second-tristan-song' | 'secret' | 'bf-ugh' | 'secret-mod-leak' | 'oppression':
-				songCreator = 'AngryLuigi23';
+				songCreator = 'MoldyGH';
 			case 'mastered':
-				songCreator = 'Villezen';
+				songCreator = 'AngryLuigi23';
 			case 'exploitation':
 				songCreator = 'Oxygen';
 			case 'memory' | 'mealie':
