@@ -8060,13 +8060,13 @@ class PlayState extends MusicBeatState
 						curbg.loadGraphic(Paths.image('backgrounds/blue3d', 'shared'));
 					case 639 | 1152 | 1919:
 						switchDad(FlxG.random.int(0, 999) == 0 ? 'dave-3d-mastered' : 'dave-splitaton-mastered', dad.getPosition());
-						curbg.visible = false;
+						blue3d.visible = false;
 					case 1152:
 						switchDad(FlxG.random.int(0, 999) == 0 ? 'dave-splitaton-mastered' : 'dave-scared-mastered', dad.getPosition());
-						curbg.loadGraphic(Paths.image('backgrounds/redbg', 'shared'));
+						redbg.visible = true;
 					case 1176:
 						switchDad(FlxG.random.int(0, 999) == 0 ? 'dave-scared-mastered' : 'dave-splitaton-mastered', dad.getPosition());
-						curbg.loadGraphic(Paths.image('backgrounds/redbg', 'shared'));
+						redbg.visible = false;
 				}
 
 			case 'insanity' | 'insanity-2.5':
