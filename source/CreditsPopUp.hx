@@ -40,7 +40,9 @@ class CreditsPopUp extends FlxSpriteGroup
 				'interdimensional' | 'cheating' | 'escape-from-california' | 'five-nights' | 'kabunga' | 'secret' | 'unfairness' | 'rano' | 'master' | 'house-2.5' | 'insanity-2.5' |
 				'polygonized-2.5' | 'blocked-2.5' | 'corn-theft-2.5' | 'maze-2.5' | 'vs-dave-thanksgiving' |'bonus-song-2.5' | 'old-house' | 'old-insanity' | 'furiosity' | 'old-blocked' |
 				'old-maze' | 'old-corn-theft' | 'beta-maze' | 'old-splitathon' | 'roots'| 'threedimensional' | 'second-tristan-song' | 'secret' | 'bf-ugh' | 'secret-mod-leak' | 'oppression':
-				songCreator = 'MoldyGH';
+				songCreator = 'AngryLuigi23';
+			case 'mastered':
+				songCreator = 'Villezen';
 			case 'exploitation':
 				songCreator = 'Oxygen';
 			case 'memory' | 'mealie':
@@ -153,6 +155,8 @@ class CreditsPopUp extends FlxSpriteGroup
 		{
 			case 'polygonized' | 'Polygonized-2.5' | 'furiosity':
 				headingPath = {path: 'songHeadings/3D-daveHeading', antiAliasing: false, iconOffset: 0};
+			case 'mastered':
+				headingPath = {path: 'songHeadings/daveHeading', antiAliasing: false, iconOffset: 0};
 			case 'interdimensional':
 				headingPath = {path: 'songHeadings/interdimensionalHeading', antiAliasing: false, iconOffset: 0};
 			case 'cozen':
