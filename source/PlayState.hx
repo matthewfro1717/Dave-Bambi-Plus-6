@@ -1956,23 +1956,6 @@ class PlayState extends MusicBeatState
 					// below code assumes shaders are always enabled which is bad
 					voidShader(bg);
 				}
-
-				if (SONG.song.toLowerCase() == 'mastered' || localFunny == CharacterFunnyEffect.Recurser)
-				{
-					var blue3d:BGSprite = new BGSprite('bg', -275, -200, Paths.image('backgrounds/blue3d'), null, 1, 1, true, true);
-					new Animation('bganimationloop', 'blue3d', 5, true, [false, false]);
-				        blue3d.animation.play('bganimationloop');
-					blue3d.alpha = 0.75;
-					blue3d.visible = false;
-					add(blue3d);
-					
-					var redbg:BGSprite = new BGSprite('bg', -275, -200, Paths.image('backgrounds/redbg'), null, 1, 1, true, true);
-					new Animation('bganimationloop', 'redbg', 5, true, [false, false]);
-				        redbg.animation.play('bganimationloop');
-					redbg.alpha = 0.75;
-					redbg.visible = false;
-					add(redbg);
-				}
 						
 				var variantColor = getBackgroundColor(stageName);
 				if (stageName != 'daveHouse_night')
@@ -2002,6 +1985,19 @@ class PlayState extends MusicBeatState
 				var stageFront:BGSprite = new BGSprite('stageFront', -832, 505, Paths.image('backgrounds/dave-house/night/grass'), null);
 				sprites.add(stageFront);
 				add(stageFront);
+				
+				var blue3d:BGSprite = new BGSprite('bg', -275, -200, Paths.image('backgrounds/blue3d'), null, 1, 1, true, true);
+				new Animation('bganimationloop', 'blue3d', 5, true, [false, false]);
+			        blue3d.animation.play('bganimationloop');
+				blue3d.visible = false;
+				add(blue3d);
+					
+				var redbg:BGSprite = new BGSprite('bg', -275, -200, Paths.image('backgrounds/redbg'), null, 1, 1, true, true);
+				new Animation('bganimationloop', 'redbg', 5, true, [false, false]);
+			        redbg.animation.play('bganimationloop');
+				redbg.visible = false;
+				add(redbg);
+						
 
 			case 'inside-house':
 				bgZoom = 0.6;
