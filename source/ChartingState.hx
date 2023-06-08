@@ -1525,7 +1525,8 @@ class ChartingState extends MusicBeatState
 				['electric-cockaldoodledoo', FlxG.save.data.electricCockaldoodledooUnlocked],
 				['recursed', FlxG.save.data.recursedUnlocked],
 				['roofs', FlxG.save.data.roofsUnlocked],
-				['vs-dave-rap-two', FlxG.save.data.vsDaveRapTwoFound]
+				['vs-dave-rap-two', FlxG.save.data.vsDaveRapTwoFound],
+				['mastered', FlxG.save.data.masteredFound]
 			];
 			for (songCheck in songCheckThing)
 			{
