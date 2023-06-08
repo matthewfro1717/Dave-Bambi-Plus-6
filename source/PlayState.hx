@@ -1592,7 +1592,7 @@ class PlayState extends MusicBeatState
 			case 'polygonized' | 'polygonized-2.5':
 				preload('characters/3d_bf');
 				preload('characters/3d_gf');
-			case 'mastered'
+			case 'mastered':
 				preload('backgrounds/blue3d');
 				preload('backgrounds/redbg');
 			case 'maze' | 'indignancy':
