@@ -424,7 +424,7 @@ class FreeplayState extends MusicBeatState
 					addWeek(['Exploitation'], 16, ['expunged']);
 				addWeek(['Enter Terminal'], 17, ['terminal']);
 			case 'finale':
-				if (FlxG.save.data.masteredFound)
+				if (FlxG.save.data.allfreeplaysongsbeat)
 					addWeek(['Mastered'], 1, ['splitathon']);
 		}
 	}
