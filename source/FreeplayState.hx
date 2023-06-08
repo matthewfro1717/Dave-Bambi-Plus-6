@@ -412,6 +412,8 @@ class FreeplayState extends MusicBeatState
 				addWeek(['Foolhardy'], 2, ['zardyMyBeloved']);
 				if (FlxG.save.data.electricCockaldoodledooUnlocked)
 					addWeek(['Cuzsie-X-Kapi-Shipping-Cute'], 20, ['cuzsiee']);
+			case 'finale':
+				addWeek(['Mastered'], 16, ['expunged']);
 			case 'terminal':
 				if (FlxG.save.data.cheatingFound)
 					addWeek(['Cheating'], 14, ['bambi-3d']);
@@ -423,8 +425,7 @@ class FreeplayState extends MusicBeatState
 					addWeek(['Exploitation'], 16, ['expunged']);
 
 				addWeek(['Enter Terminal'], 17, ['terminal']);
-			case 'finale':
-				addWeek(['Mastered'], 16, ['expunged']);
+
 		}
 	}
 
