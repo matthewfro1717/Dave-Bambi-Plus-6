@@ -735,8 +735,8 @@ class PlayState extends MusicBeatState
 				case 'house' | 'insanity' | 'supernovae' | 'old-supernovae' | 'warmup' | 'threedimensional' | 'second-tristan-song' |
 				'house-2.5' | 'insanity-2.5' | 'roots' | 'vs-dave-thanksgiving':
 					stageCheck = 'house';
-			        case 'mastered'
-					stageCheck = 'mastered'
+			        case 'mastered':
+					stageCheck = 'mastered';
 				case 'polygonized' | 'polygonized-2.5' | 'furiosity':
 					stageCheck = 'red-void';
 				case 'bonus-song':
