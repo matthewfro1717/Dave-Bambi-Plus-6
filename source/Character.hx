@@ -594,12 +594,57 @@ class Character extends FlxSprite
 				barColor = FlxColor.fromRGB(15, 95, 255);
 	
 				playAnim('idle');
-
 			case 'dave-angey':
 				// DAVE SHITE ANIMATION LOADING CODE
 				frames = Paths.getSparrowAtlas('dave/characters/Dave_3D', 'shared');
 
 				animation.addByPrefix('idle', 'Idle', 24, false);
+				animation.addByPrefix('singUP', 'up', 24, false);
+				animation.addByPrefix('singRIGHT', 'right', 24, false);
+				animation.addByPrefix('singDOWN', 'down', 24, false);
+				animation.addByPrefix('singLEFT', 'left', 24, false);
+		
+				loadOffsetFile(curCharacter + (isPlayer ? '-playable' : ''));
+				
+				globalOffset = [-140, -380];
+				
+				barColor = FlxColor.fromRGB(130, 47, 42);
+
+				setGraphicSize(Std.int((width * 0.8) / furiosityScale));
+				updateHitbox();
+				antialiasing = false;
+
+				skins.set('recursed', 'dave-3d-recursed');
+
+				playAnim('idle');
+			case 'dave-3d-mastered':
+				// DAVE SHITE ANIMATION LOADING CODE
+				frames = Paths.getSparrowAtlas('dave/characters/3DSplitDave', 'shared');
+
+				animation.addByPrefix('idle', 'idle', 24, false);
+				animation.addByPrefix('singUP', 'up', 24, false);
+				animation.addByPrefix('singRIGHT', 'right', 24, false);
+				animation.addByPrefix('singDOWN', 'down', 24, false);
+				animation.addByPrefix('singLEFT', 'left', 24, false);
+		
+				loadOffsetFile(curCharacter + (isPlayer ? '-playable' : ''));
+				
+				globalOffset = [-140, -380];
+				
+				barColor = FlxColor.fromRGB(130, 47, 42);
+
+				setGraphicSize(Std.int((width * 0.8) / furiosityScale));
+				updateHitbox();
+				antialiasing = false;
+
+				skins.set('recursed', 'dave-3d-recursed');
+
+				playAnim('idle');
+			case 'dave-scared-mastered':
+				// DAVE SHITE ANIMATION LOADING CODE
+				frames = Paths.getSparrowAtlas('dave/characters/3DScaredDave', 'shared');
+
+				animation.addByPrefix('idle', 'idle', 24, false);
 				animation.addByPrefix('singUP', 'up', 24, false);
 				animation.addByPrefix('singRIGHT', 'right', 24, false);
 				animation.addByPrefix('singDOWN', 'down', 24, false);
@@ -701,8 +746,26 @@ class Character extends FlxSprite
 
 				nativelyPlayable = true;
 				playAnim('idle');
-				
+
 			case 'dave-splitathon':
+				frames = Paths.getSparrowAtlas('splitathon/Splitathon_Dave', 'shared');
+				animation.addByPrefix('idle', 'idle', 24, false);
+				for (anim in ['left', 'down', 'up', 'right'])
+				{
+					animation.addByPrefix('sing${anim.toUpperCase()}', anim, 24, false);
+				}
+				animation.addByPrefix('scared', 'waiting', 24, true);
+				animation.addByPrefix('what', 'bruh', 24, true);
+				animation.addByPrefix('happy', 'happy', 24, true);
+
+				loadOffsetFile(curCharacter + (isPlayer ? '-playable' : ''));
+				globalOffset = [0, -180];
+
+				barColor = FlxColor.fromRGB(15, 95, 255);
+
+				playAnim('idle');
+
+			case 'dave-splitathon-mastered':
 				frames = Paths.getSparrowAtlas('splitathon/Splitathon_Dave', 'shared');
 				animation.addByPrefix('idle', 'idle', 24, false);
 				for (anim in ['left', 'down', 'up', 'right'])
