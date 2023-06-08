@@ -413,7 +413,7 @@ class FreeplayState extends MusicBeatState
 				if (FlxG.save.data.electricCockaldoodledooUnlocked)
 					addWeek(['Cuzsie-X-Kapi-Shipping-Cute'], 20, ['cuzsiee']);
 			case 'finale':
-				addWeek(['Mastered'], 16, ['dave-splitathon-mastered']);
+				addWeek(['Mastered'], 1, ['dave-splitathon-mastered']);
 			case 'terminal':
 				if (FlxG.save.data.cheatingFound)
 					addWeek(['Cheating'], 14, ['bambi-3d']);
