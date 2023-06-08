@@ -1969,24 +1969,20 @@ class PlayState extends MusicBeatState
 				var bg:BGSprite = new BGSprite('bg', -600, -300, Paths.image('backgrounds/shared/sky_night'), null, 0.6, 0.6);
 				sprites.add(bg);
 				add(bg);
-						
-				var bg:BGSprite = new BGSprite('bg', -600, -300, Paths.image('backgrounds/shared/${skyType}'), null, 0.6, 0.6);
-				sprites.add(bg);
-				add(bg);
 				
-				var stageHills:BGSprite = new BGSprite('stageHills', -834, -159, Paths.image('backgrounds/dave-house/${assetType}hills'), null, 0.7, 0.7);
+				var stageHills:BGSprite = new BGSprite('stageHills', -834, -159, Paths.image('backgrounds/dave-house/night/hills'), null, 0.7, 0.7);
 				sprites.add(stageHills);
 				add(stageHills);
 
-				var grassbg:BGSprite = new BGSprite('grassbg', -1205, 580, Paths.image('backgrounds/dave-house/${assetType}grass bg'), null);
+				var grassbg:BGSprite = new BGSprite('grassbg', -1205, 580, Paths.image('backgrounds/dave-house/night/grass bg'), null);
 				sprites.add(grassbg);
 				add(grassbg);
 	
-				var gate:BGSprite = new BGSprite('gate', -755, 250, Paths.image('backgrounds/dave-house/${assetType}gate'), null);
+				var gate:BGSprite = new BGSprite('gate', -755, 250, Paths.image('backgrounds/dave-house/night/gate'), null);
 				sprites.add(gate);
 				add(gate);
 	
-				var stageFront:BGSprite = new BGSprite('stageFront', -832, 505, Paths.image('backgrounds/dave-house/${assetType}grass'), null);
+				var stageFront:BGSprite = new BGSprite('stageFront', -832, 505, Paths.image('backgrounds/dave-house/night/grass'), null);
 				sprites.add(stageFront);
 				add(stageFront);
 
