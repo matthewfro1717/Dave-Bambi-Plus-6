@@ -58,7 +58,7 @@ class FreeplayState extends MusicBeatState
 		LanguageManager.getTextString('freeplay_classic'),
 		LanguageManager.getTextString('freeplay_cover'),
 		LanguageManager.getTextString('freeplay_fanmade'),
-		LanguageManager.getTextString('freeplay_terminal')
+		LanguageManager.getTextString('freeplay_finale')
 	];
 
 	private var CurrentPack:Int = 0;
@@ -141,8 +141,7 @@ class FreeplayState extends MusicBeatState
 		'secret-mod-leak',
 		'vs-dave-thanksgiving',
 		'bonkers',
-		'duper',
-		'cozen'
+		'duper'
 	];
 
 	private var camFollow:FlxObject;
@@ -222,7 +221,7 @@ class FreeplayState extends MusicBeatState
 		}
 		if (FlxG.save.data.terminalFound && !awaitingExploitation)
 		{
-			Catagories = ['dave', 'joke', 'extras', 'dave2.5', 'classic', 'cover', 'fanmade', 'terminal', 'finale'];
+			Catagories = ['dave', 'joke', 'extras', 'dave2.5', 'classic', 'cover', 'fanmade', 'terminal'];
 			translatedCatagory = [
 				LanguageManager.getTextString('freeplay_dave'),
 				LanguageManager.getTextString('freeplay_joke'),
@@ -231,6 +230,7 @@ class FreeplayState extends MusicBeatState
 				LanguageManager.getTextString('freeplay_classic'),
 				LanguageManager.getTextString('freeplay_cover'),
 				LanguageManager.getTextString('freeplay_fanmade'),
+		                LanguageManager.getTextString('freeplay_finale'),
 				LanguageManager.getTextString('freeplay_terminal')];
 		}
 
@@ -355,7 +355,6 @@ class FreeplayState extends MusicBeatState
 						addWeek(['Cheating'], 14, ['bambi-3d']);
 					if (FlxG.save.data.unfairnessFound)
 						addWeek(['Unfairness'], 15, ['bambi-unfair']);
-						addWeek(['Cozen'], 15, ['bambi-unfair']);
 				}
 				if (FlxG.save.data.exbungoFound)
 					addWeek(['Kabunga'], 6, ['exbungo']);
@@ -419,13 +418,13 @@ class FreeplayState extends MusicBeatState
 				if (FlxG.save.data.riggedFound) // is back now
 					addWeek(['Rigged'], 14, ['bambi-3d']);
 				if (FlxG.save.data.unfairnessFound)
-					addWeek(['Unfairness'], 15, ['bambi-unfair']);					
-					addWeek(['Cozen'], 15, ['bambi-unfair']);
+					addWeek(['Unfairness'], 15, ['bambi-unfair']);
 				if (FlxG.save.data.exploitationFound)
 					addWeek(['Exploitation'], 16, ['expunged']);
+
 				addWeek(['Enter Terminal'], 17, ['terminal']);
 			case 'finale':
-				addWeek(['Mastered'], 1, ['splitathon']);
+				addWeek(['Mastered'], 16, ['expunged']);
 		}
 	}
 
