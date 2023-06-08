@@ -221,7 +221,7 @@ class FreeplayState extends MusicBeatState
 		}
 		if (FlxG.save.data.terminalFound && !awaitingExploitation)
 		{
-			Catagories = ['dave', 'joke', 'extras', 'dave2.5', 'classic', 'cover', 'fanmade', 'terminal'];
+			Catagories = ['dave', 'joke', 'extras', 'dave2.5', 'classic', 'cover', 'fanmade', 'finale', 'terminal'];
 			translatedCatagory = [
 				LanguageManager.getTextString('freeplay_dave'),
 				LanguageManager.getTextString('freeplay_joke'),
