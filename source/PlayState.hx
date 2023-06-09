@@ -8066,12 +8066,15 @@ class PlayState extends MusicBeatState
 						switchDad(FlxG.random.int(0, 999) == 0 ? 'dave-scared-mastered' : 'dave-splitaton-mastered', dad.getPosition());
 						redbg.visible = false;
 					case 2047:
-					if (misses = 0)
+					if (misses = 0) {
 						dad.animation.play('damn', true);
-					else (misses = 20)
+				        }
+					else (misses = 20) {
 						dad.animation.play('bro', true);
-					else (botPlay)
+				        }
+					else (botPlay) {
 						dad.animation.play('bro', true);
+				        }
 				}
 
 			case 'insanity' | 'insanity-2.5':
