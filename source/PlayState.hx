@@ -8053,11 +8053,9 @@ class PlayState extends MusicBeatState
 			case 'mastered':
 				switch (curStep)
 				{
-					case 376 | 378 | 380 | 382:
-						defaultCamZoom = 0.3;
 					case 384 | 895 | 1412:
 						switchDad(FlxG.random.int(0, 999) == 0 ? 'dave-splitaton-mastered' : 'dave-3d-mastered', dad.getPosition());
-						curbg.loadGraphic(Paths.image('backgrounds/blue3d', 'shared'));
+						blue3d.visible = true;
 					case 639 | 1152 | 1919:
 						switchDad(FlxG.random.int(0, 999) == 0 ? 'dave-3d-mastered' : 'dave-splitaton-mastered', dad.getPosition());
 						blue3d.visible = false;
