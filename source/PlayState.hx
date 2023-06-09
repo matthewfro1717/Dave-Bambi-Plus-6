@@ -8054,23 +8054,23 @@ class PlayState extends MusicBeatState
 				switch (curStep)
 				{
 					case 384 | 895 | 1412:
-						switchDad(FlxG.random.int(0, 999) == 0 ? 'dave-splitaton-mastered' : 'dave-3d-mastered', dad.getPosition());
 						blue3d.visible = true;
+		                                switchDad('dave-3d-mastered', dad.getPosition(), false);
 					case 639 | 1152 | 1919:
-						switchDad(FlxG.random.int(0, 999) == 0 ? 'dave-3d-mastered' : 'dave-splitaton-mastered', dad.getPosition());
 						blue3d.visible = false;
+						switchDad('dave-splitathon-mastered', dad.getPosition(), false);
 					case 1152:
-						switchDad(FlxG.random.int(0, 999) == 0 ? 'dave-splitaton-mastered' : 'dave-scared-mastered', dad.getPosition());
 						redbg.visible = true;
+						switchDad('dave-scared-mastered', dad.getPosition(), false);
 					case 1176:
-						switchDad(FlxG.random.int(0, 999) == 0 ? 'dave-scared-mastered' : 'dave-splitaton-mastered', dad.getPosition());
 						redbg.visible = false;
+						switchDad('dave-3d-mastered', dad.getPosition(), false);
 					case 2047:
-					if (misses = 0);
+					if (misses = 0)
 						dad.animation.play('damn', true);
-					else (misses = 20);
+					else (misses = 20)
 						dad.animation.play('bro', true);
-					else (botPlay);
+					else (botPlay)
 						dad.animation.play('bro', true);
 				        }
 				}
