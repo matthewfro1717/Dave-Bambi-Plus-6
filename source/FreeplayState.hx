@@ -141,7 +141,8 @@ class FreeplayState extends MusicBeatState
 		'secret-mod-leak',
 		'vs-dave-thanksgiving',
 		'bonkers',
-		'duper'
+		'duper',
+		'mastered'
 	];
 
 	private var camFollow:FlxObject;
