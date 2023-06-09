@@ -8072,7 +8072,6 @@ class PlayState extends MusicBeatState
 						dad.animation.play('bro', true);
 					if (botPlay)
 						dad.animation.play('bro', true);
-				        }
 				}
 
 			case 'insanity' | 'insanity-2.5':
