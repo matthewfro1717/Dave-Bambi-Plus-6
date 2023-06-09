@@ -8066,10 +8066,13 @@ class PlayState extends MusicBeatState
 						redbg.visible = false;
 						switchDad('dave-3d-mastered', dad.getPosition(), false);
 					case 2047:
-						if (misses = 0) {
+						if (misses > 0) {
 							dad.animation.play('damn', true);
 						}
-						else {
+						else if (misses > 20) {
+							dad.animation.play('bro', true);
+					        }
+						else if (botPlay) {
 							dad.animation.play('bro', true);
 					        }
 				}
