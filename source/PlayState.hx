@@ -482,6 +482,10 @@ class PlayState extends MusicBeatState
 	var doorButton:BGSprite;
 	var doorClosed:Bool;
 	var doorChanging:Bool;
+	
+	//mastered
+	var blue3d:BGSprite;
+	var redbg:BGSprite;
 
 	var banbiWindowNames:Array<String> = ['when you realize you have school this monday', 'industrial society and its future', 'my ears burn', 'i got that weed card', 'my ass itch', 'bruh', 'alright instagram its shoutout time'];
 
