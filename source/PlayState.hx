@@ -8068,9 +8068,7 @@ class PlayState extends MusicBeatState
 					case 2047:
 					if (misses = 0)
 						dad.animation.play('damn', true);
-					if (misses = 20)
-						dad.animation.play('bro', true);
-					if (botPlay)
+                                        else if (misses = 20 && botPlay)
 						dad.animation.play('bro', true);
 				}
 
