@@ -772,9 +772,8 @@ class Character extends FlxSprite
 				{
 					animation.addByPrefix('sing${anim.toUpperCase()}', anim, 24, false);
 				}
-				animation.addByPrefix('scared', 'waiting', 24, true);
-				animation.addByPrefix('what', 'bruh', 24, true);
-				animation.addByPrefix('happy', 'happy', 24, true);
+				animation.addByPrefix('bro', 'bro', 24, true);
+				animation.addByPrefix('damn', 'damn', 24, true);
 
 				loadOffsetFile(curCharacter + (isPlayer ? '-playable' : ''));
 				globalOffset = [0, -180];
