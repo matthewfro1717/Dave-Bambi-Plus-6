@@ -8055,13 +8055,19 @@ class PlayState extends MusicBeatState
 				{
 					case 384 | 895 | 1412:
 						blue3d.visible = true;
-		                                switchDad('dave-3d-mastered', dad.getPosition(), false);
+						remove(dad);
+                                                dad = new Character(dad.getPosition, 'dave-3d-mastered');
+                                                add(dad);
 					case 639 | 1152 | 1919:
 						blue3d.visible = false;
-						switchDad('dave-splitathon-mastered', dad.getPosition(), false);
+						remove(dad);
+                                                dad = new Character(dad.getPosition, 'dave-splitathon-mastered');
+                                                add(dad);
 					case 1152:
 						redbg.visible = true;
-						switchDad('dave-scared-mastered', dad.getPosition(), false);
+						remove(dad);
+                                                dad = new Character(dad.getPosition, 'dave-scared-mastered');
+                                                add(dad);
 					case 1176:
 						redbg.visible = false;
 						switchDad('dave-3d-mastered', dad.getPosition(), false);
