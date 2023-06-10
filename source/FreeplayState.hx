@@ -421,7 +421,8 @@ class FreeplayState extends MusicBeatState
 				if (FlxG.save.data.riggedFound) // is back now
 					addWeek(['Rigged'], 14, ['bambi-3d']);
 				if (FlxG.save.data.unfairnessFound)
-					addWeek(['Unfairness', 'Cozen'], 15, ['bambi-unfair', 'bambi-unfair']);
+					addWeek(['Unfairness'], 15, ['bambi-unfair']);
+				        addWeek(['Cozen'], 15 ['bambi-unfair']);
 				if (FlxG.save.data.exploitationFound)
 					addWeek(['Exploitation'], 16, ['expunged']);
 
