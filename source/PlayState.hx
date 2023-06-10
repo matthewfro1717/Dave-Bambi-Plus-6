@@ -8056,21 +8056,24 @@ class PlayState extends MusicBeatState
 					case 384 | 895 | 1412:
 						blue3d.visible = true;
 						remove(dad);
-                                                dad = new Character(dad.getPosition, 'dave-3d-mastered');
+                                                dad = new Character(100, 100, 'dave-3d-mastered');
                                                 add(dad);
 					case 639 | 1152 | 1919:
 						blue3d.visible = false;
 						remove(dad);
-                                                dad = new Character(dad.getPosition, 'dave-splitathon-mastered');
+                                                dad = new Character(100, 100, 'dave-splitathon-mastered');
                                                 add(dad);
 					case 1152:
 						redbg.visible = true;
 						remove(dad);
-                                                dad = new Character(dad.getPosition, 'dave-scared-mastered');
+                                                dad = new Character(100, 100, 'dave-scared-mastered');
                                                 add(dad);
 					case 1176:
+						blue3d.visible = true;
 						redbg.visible = false;
-						switchDad('dave-3d-mastered', dad.getPosition(), false);
+						remove(dad);
+                                                dad = new Character(100, 100, 'dave-3d-mastered');
+                                                add(dad);
 					case 2047:
 						if (misses > 0) {
 							dad.animation.play('damn', true);
