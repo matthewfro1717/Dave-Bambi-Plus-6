@@ -42,7 +42,8 @@ class CreditsPopUp extends FlxSpriteGroup
 				'old-maze' | 'old-corn-theft' | 'beta-maze' | 'old-splitathon' | 'roots'| 'threedimensional' | 'second-tristan-song' | 'secret' | 'bf-ugh' | 'secret-mod-leak' | 'oppression':
 				songCreator = 'MoldyGH';
 			case 'mastered':
-				songCreator = 'AL23';
+				songCreator = 'AL23 \nChart  AngryLuigi23';
+				songCreatorIcon = 'AL23 & AngryLuigi23';
 			case 'exploitation':
 				songCreator = 'Oxygen';
 			case 'memory' | 'mealie':
