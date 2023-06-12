@@ -7754,6 +7754,50 @@ class PlayState extends MusicBeatState
 		super.stepHit();
 		if (FlxG.sound.music.time > Conductor.songPosition + 20 || FlxG.sound.music.time < Conductor.songPosition - 20)
 			resyncVocals();
+		
+		if ((SONG.song.toLowerCase() == 'mastered')
+		{
+		    if = (curStep == 384 | 895 | 1412)
+		    {
+			blue3d.visible = true;
+			remove(dad);
+                        dad = new Character(100, 100, 'dave-3d-mastered');
+                        add(dad);
+		    }
+		    if = (curStep == 639 | 1152 | 1919)
+	            {
+			blue3d.visible = false;
+			remove(dad);
+                        dad = new Character(100, 100, 'dave-splitathon-mastered');
+                        add(dad);
+	            }
+		    if = (curStep == 1152)
+		    {
+			redbg.visible = true;
+			remove(dad);
+                        dad = new Character(100, 100, 'dave-scared-mastered');
+                        add(dad);
+		    }
+		    if = (curStep == 1176)
+		    {
+			blue3d.visible = true;
+			redbg.visible = false;
+			remove(dad);
+                        dad = new Character(100, 100, 'dave-3d-mastered');
+                        add(dad);
+		    }
+		    if = (curStep == 2047:
+	            {
+			if (misses > 0) {
+				dad.animation.play('damn', true);
+			}
+			else if (misses > 20) {
+				dad.animation.play('bro', true);
+                        }
+			else if (botPlay) {
+				dad.animation.play('bro', true);
+                        }
+	            }
 
 		switch (SONG.song.toLowerCase())
 		{
@@ -8048,42 +8092,6 @@ class PlayState extends MusicBeatState
 					case 4799 | 5823 | 6079 | 8383:
 						hasTriggeredDumbshit = false;
 						updatevels = false;
-				}
-
-			case 'mastered':
-				switch (curStep)
-				{
-					case 384 | 895 | 1412:
-						blue3d.visible = true;
-						remove(dad);
-                                                dad = new Character(100, 100, 'dave-3d-mastered');
-                                                add(dad);
-					case 639 | 1152 | 1919:
-						blue3d.visible = false;
-						remove(dad);
-                                                dad = new Character(100, 100, 'dave-splitathon-mastered');
-                                                add(dad);
-					case 1152:
-						redbg.visible = true;
-						remove(dad);
-                                                dad = new Character(100, 100, 'dave-scared-mastered');
-                                                add(dad);
-					case 1176:
-						blue3d.visible = true;
-						redbg.visible = false;
-						remove(dad);
-                                                dad = new Character(100, 100, 'dave-3d-mastered');
-                                                add(dad);
-					case 2047:
-						if (misses > 0) {
-							dad.animation.play('damn', true);
-						}
-						else if (misses > 20) {
-							dad.animation.play('bro', true);
-					        }
-						else if (botPlay) {
-							dad.animation.play('bro', true);
-					        }
 				}
 
 			case 'insanity' | 'insanity-2.5':
