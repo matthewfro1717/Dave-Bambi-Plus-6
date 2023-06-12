@@ -7754,53 +7754,45 @@ class PlayState extends MusicBeatState
 		super.stepHit();
 		if (FlxG.sound.music.time > Conductor.songPosition + 20 || FlxG.sound.music.time < Conductor.songPosition - 20)
 			resyncVocals();
-		
-		if ((SONG.song.toLowerCase() == 'mastered')
-		{
-		    if = (curStep == 384 | 895 | 1412)
-		    {
-			blue3d.visible = true;
-			remove(dad);
-                        dad = new Character(100, 100, 'dave-3d-mastered');
-                        add(dad);
-		    }
-		    if = (curStep == 639 | 1152 | 1919)
-	            {
-			blue3d.visible = false;
-			remove(dad);
-                        dad = new Character(100, 100, 'dave-splitathon-mastered');
-                        add(dad);
-	            }
-		    if = (curStep == 1152)
-		    {
-			redbg.visible = true;
-			remove(dad);
-                        dad = new Character(100, 100, 'dave-scared-mastered');
-                        add(dad);
-		    }
-		    if = (curStep == 1176)
-		    {
-			blue3d.visible = true;
-			redbg.visible = false;
-			remove(dad);
-                        dad = new Character(100, 100, 'dave-3d-mastered');
-                        add(dad);
-		    }
-		    if = (curStep == 2047:
-	            {
-			if (misses > 0) {
-				dad.animation.play('damn', true);
-			}
-			else if (misses > 20) {
-				dad.animation.play('bro', true);
-                        }
-			else if (botPlay) {
-				dad.animation.play('bro', true);
-                        }
-	            }
 
 		switch (SONG.song.toLowerCase())
 		{
+			case 'mastered':
+				switch (curStep)
+				{
+					case 384 | 895 | 1412:
+						blue3d.visible = true;
+						remove(dad);
+                                                dad = new Character(100, 100, 'dave-3d-mastered');
+                                                add(dad);
+					case 639 | 1152 | 1919:
+						blue3d.visible = false;
+						remove(dad);
+                                                dad = new Character(100, 100, 'dave-splitathon-mastered');
+                                                add(dad);
+					case 1152:
+						redbg.visible = true;
+						remove(dad);
+                                                dad = new Character(100, 100, 'dave-scared-mastered');
+                                                add(dad);
+					case 1176:
+						blue3d.visible = true;
+						redbg.visible = false;
+						remove(dad);
+                                                dad = new Character(100, 100, 'dave-3d-mastered');
+                                                add(dad);
+					case 2047:
+						if (misses > 0) {
+							dad.animation.play('damn', true);
+						}
+						else if (misses > 20) {
+							dad.animation.play('bro', true);
+					        }
+						else if (botPlay) {
+							dad.animation.play('bro', true);
+					        }
+				}
+
 			case 'blocked':
 				switch (curStep)
 				{
@@ -7876,7 +7868,11 @@ class PlayState extends MusicBeatState
 					case 2355:
 				                subtitleManager.addSubtitle(LanguageManager.getTextString('cozen_sub2'), 0.02, 0.6);
 					case 2388:
+				                subtitleManager.addSubtitle(LanguageManager.getTextString('cozen_sub3'), 0.02, 1.5);
+					case 2432:
 				                subtitleManager.addSubtitle(LanguageManager.getTextString('cozen_sub4'), 0.02, 1.5);
+					case 2464:
+			                        subtitleManager.addSubtitle(LanguageManager.getTextString('cozen_sub5'), 0.02, 1);
 					case 2479:
 			                        subtitleManager.addSubtitle(LanguageManager.getTextString('cozen_sub6'), 0.02, 1);
 					case 2493:
