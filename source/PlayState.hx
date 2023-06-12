@@ -195,6 +195,8 @@ class PlayState extends MusicBeatState
 
 	private var dad:Character;
 	private var dadmirror:Character;
+	private var dadmirror2:Character;
+	private var dadmirror3:Character;
 	private var gf:Character;
 	private var boyfriend:Boyfriend;
 
@@ -921,6 +923,13 @@ class PlayState extends MusicBeatState
 			case 'insanity' | 'insanity-2.5':
 				dadmirror = new Character(100, 200, "dave-angey");
 				dadmirror.visible = false;
+			case 'mastered':
+				dadmirror = new Character(100, 200, "dave-3d-mastered");
+				dadmirror.visible = false;
+				dadmirror2 = new Character(100, 200, "dave-scared-mastered");
+				dadmirror2.visible = false;
+				dadmirror3 = new Character(100, 200, "dave-splitathon-mastered");
+				dadmirror3.visible = false;
 		}
 		switch (SONG.song.toLowerCase())
 		{
@@ -7761,26 +7770,34 @@ class PlayState extends MusicBeatState
 				switch (curStep)
 				{
 					case 384 | 895 | 1412:
+						dad.visible = false;
+						dadmirror.visible = true;
 						blue3d.visible = true;
-						remove(dad);
-                                                dad = new Character(100, 100, 'dave-3d-mastered');
-                                                add(dad);
+						iconP2.changeIcon(dad.curCharacter);
 					case 639 | 1152 | 1919:
+						dad.visible = false;
+						dadmirror3.visible = true;
 						blue3d.visible = false;
-						remove(dad);
-                                                dad = new Character(100, 100, 'dave-splitathon-mastered');
-                                                add(dad);
+						iconP2.changeIcon(dad.curCharacter);
 					case 1152:
+						dad.visible = false;
+						dadmirror2.visible = true;
 						redbg.visible = true;
-						remove(dad);
-                                                dad = new Character(100, 100, 'dave-scared-mastered');
-                                                add(dad);
-					case 1176:
+						iconP2.changeIcon(dad.curCharacter);
+					case 1176:		
+				                dad.visible = false;
+						dadmirror.visible = true;
 						blue3d.visible = true;
 						redbg.visible = false;
 						remove(dad);
-                                                dad = new Character(100, 100, 'dave-3d-mastered');
-                                                add(dad);
+						iconP2.changeIcon(dad.curCharacter);
+				        case 639 | 1152 | 1919:
+				                dad.visible = false;
+						dadmirror3.visible = true;
+						blue3d.visible = false;
+						redbg.visible = false;
+						remove(dad);
+						iconP2.changeIcon(dad.curCharacter);
 					case 2047:
 						if (misses > 0) {
 							dad.animation.play('damn', true);
