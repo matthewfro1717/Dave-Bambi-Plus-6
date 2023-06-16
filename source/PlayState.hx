@@ -1232,8 +1232,8 @@ class PlayState extends MusicBeatState
 				dad.y += -75;
 				gf.x += 248;
 				gf.y += -33;
-				boyfriend.x += 753;
-				boyfriend.y += 238;
+				boyfriend.x += 800;
+				boyfriend.y += 174;
 		}
 
 		switch (stageCheck)
@@ -2026,24 +2026,25 @@ class PlayState extends MusicBeatState
 				bgZoom = 0.9;
 				curStage = 'detected';
 
-				var hexBack = new FlxSprite(-24, 24).loadGraphic(Paths.image('backgrounds/detected/hexBack'));
+				var hexBack = new FlxSprite(-500, -30).loadGraphic(Paths.image('backgrounds/detected/hexBack'));
 				hexBack.antialiasing = true;
 				hexBack.scrollFactor.set(0.9, 0.9);
 				hexBack.setGraphicSize(Std.int(hexBack.width * 1.5));
 				add(hexBack);
 
-				var hexFront = new FlxSprite(-24, 24).loadGraphic(Paths.image('backgrounds/detected/hexFront'));
+				var hexFront = new FlxSprite(-532, 366).loadGraphic(Paths.image('backgrounds/detected/hexFront'));
 				hexFront.antialiasing = true;
 			        hexFront.scrollFactor.set(0.9, 0.9);
 				hexFront.setGraphicSize(Std.int(hexFront.width * 1.5));
 			        add(hexFront);
 
-				var topOverlay = new FlxSprite(-24, 24).loadGraphic(Paths.image('backgrounds/detected/topOverlay'));
+				var topOverlay = new FlxSprite(-450, 90).loadGraphic(Paths.image('backgrounds/detected/topOverlay'));
 				topOverlay.antialiasing = true;
 				topOverlay.scrollFactor.set(0.9, 0.9);
 				topOverlay.setGraphicSize(Std.int(topOverlay.width * 1.5));
+			        add(topOverlay);
 
-				var crowd:FlxSprite = new FlxSprite(42, -14);
+				var crowd:FlxSprite = new FlxSprite(-450, 90);
 				crowd.frames = Paths.getSparrowAtlas('backgrounds/detected/crowd');
 				crowd.animation.addByPrefix('bop', 'Symbol 1', 24, false);
 				crowd.antialiasing = true;
