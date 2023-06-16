@@ -7743,7 +7743,7 @@
 		"speed": 1.6,
 		"sectionLengths": [],
 		"events": [],
-		"gfVersion": "nogf",
+		"gfVersion": "gf-none",
 		"chartVersion": "KE1",
 		"eventObjects": [
 			{
