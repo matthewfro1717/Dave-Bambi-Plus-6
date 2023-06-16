@@ -2023,7 +2023,7 @@ class PlayState extends MusicBeatState
 				add(redbg);
 
 		        case 'detected':
-				camZoom = 0.9;
+				bgZoom = 0.9;
 				curStage = 'detected';
 
 				var hexBack = new FlxSprite(-24, 24).loadGraphic(Paths.image('backgrounds/detected/hexBack'));
@@ -2048,7 +2048,7 @@ class PlayState extends MusicBeatState
 				crowd.animation.addByPrefix('bop', 'Symbol 1', 24, false);
 				crowd.antialiasing = true;
 				crowd.scrollFactor.set(0.9, 0.9);
-				crowd.setGraphicSize(Std.int(sprite.width * 1.5));
+				crowd.setGraphicSize(Std.int(crowd.width * 1.5));
 				add(crowd);
 
 			case 'inside-house':
