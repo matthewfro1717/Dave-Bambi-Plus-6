@@ -1223,6 +1223,13 @@ class PlayState extends MusicBeatState
 				gf.y += 140;
 				boyfriend.x += 80;
 				boyfriend.y += 140;
+	                case 'detected':
+				dad.x += 125;
+				dad.y += -75;
+				gf.x += 248;
+				gf.y += -33;
+				boyfriend.x += 753;
+				boyfriend.y += 238;
 		}
 
 		switch (stageCheck)
@@ -2010,7 +2017,35 @@ class PlayState extends MusicBeatState
 			        redbg.animation.play('bganimationloop');
 				redbg.visible = false;
 				add(redbg);
-						
+
+		        case 'detected':
+				camZoom = 0.9;
+				curStage = 'detected';
+
+				var hexBack = new FlxSprite(-24, 24).loadGraphic(Paths.image('backgrounds/detected/hexBack'));
+				hexBack.antialiasing = true;
+				hexBack.scrollFactor.set(0.9, 0.9);
+				hexBack.setGraphicSize(Std.int(hexBack.width * 1.5));
+				add(hexBack);
+
+				var hexFront = new FlxSprite(-24, 24).loadGraphic(Paths.image('backgrounds/detected/hexFront'));
+				hexFront.antialiasing = true;
+			        hexFront.scrollFactor.set(0.9, 0.9);
+				hexFront.setGraphicSize(Std.int(hexFront.width * 1.5));
+			        add(hexFront);
+
+				var topOverlay = new FlxSprite(-24, 24).loadGraphic(Paths.image('backgrounds/detected/topOverlay'));
+				topOverlay.antialiasing = true;
+				topOverlay.scrollFactor.set(0.9, 0.9);
+				topOverlay.setGraphicSize(Std.int(topOverlay.width * 1.5));
+
+				var crowd:FlxSprite = new FlxSprite(42, -14);
+				crowd.frames = Paths.getSparrowAtlas('backgrounds/detected/crowd');
+				crowd.animation.addByPrefix('bop', 'Symbol 1', 24, false);
+				crowd.antialiasing = true;
+				crowd.scrollFactor.set(0.9, 0.9);
+				crowd.setGraphicSize(Std.int(sprite.width * 1.5));
+				add(crowd);
 
 			case 'inside-house':
 				bgZoom = 0.6;
