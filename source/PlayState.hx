@@ -1201,6 +1201,8 @@ class PlayState extends MusicBeatState
 					dad.y -= 70;
 				}
 				if (isShaggy) boyfriend.y += 50;
+			case 'mixed':
+			        dad.y -= 70;
 			case 'interdimension-void':
 				if (isShaggy) boyfriend.y += 100;
 			case 'green-void':
@@ -2595,7 +2597,7 @@ class PlayState extends MusicBeatState
 					case 'mixed':
 						bgZoom = 0.8;
 						bg.loadGraphic(Paths.image('backgrounds/void/mixed', 'shared'));
-						stageName = 'daveEvilHouse';
+						stageName = 'mixed';
 						weirdBG = bg;
 
 				if (['unfairness'].contains(SONG.song.toLowerCase()) && FlxG.random.int(0, 4) == 0)
