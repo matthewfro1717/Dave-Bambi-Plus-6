@@ -44,8 +44,10 @@ class CreditsPopUp extends FlxSpriteGroup
 			case 'mastered':
 				songCreator = 'AL23 \nChart by AngryLuigi23';
 				songCreatorIcon = 'AL23 & AngryLuigi23';
+		        case 'cheating-not-cute':
+				songCreator = 'Cynda';
 		        case 'detected':
-				songCreator = 'ying \nCover by Funky Eyy!'
+				songCreator = 'ying \nCover by Funky Eyy!';
 				songCreatorIcon = 'ying & Funky Eyy!';
 			case 'exploitation':
 				songCreator = 'Oxygen';
@@ -161,6 +163,10 @@ class CreditsPopUp extends FlxSpriteGroup
 				headingPath = {path: 'songHeadings/3D-daveHeading', antiAliasing: false, iconOffset: 0};
 			case 'mastered':
 				headingPath = {path: 'songHeadings/daveHeading', antiAliasing: false, iconOffset: 0};
+			case 'detected':
+				headingPath = {path: 'songHeadings/daveHeading', antiAliasing: false, iconOffset: 0};
+			case 'cheating-not-cute':
+				headingPath = {path: 'songHeadings/bambiHeading', antiAliasing: false, iconOffset: 0};
 			case 'interdimensional':
 				headingPath = {path: 'songHeadings/interdimensionalHeading', antiAliasing: false, iconOffset: 0};
 			case 'cozen':
