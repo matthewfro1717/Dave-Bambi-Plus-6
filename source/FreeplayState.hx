@@ -103,7 +103,9 @@ class FreeplayState extends MusicBeatState
 		'eletric-cockadoodledoo',
 		'electric-cockaldoodledoo',
 		'super-saiyan',
-		'foolhardy'
+		'foolhardy',
+		'detected',
+		'cheating-not-cute'
 	];
 
 	public static var noExtraKeys:Array<String> = 
@@ -142,7 +144,9 @@ class FreeplayState extends MusicBeatState
 		'vs-dave-thanksgiving',
 		'bonkers',
 		'duper',
-		'mastered'
+		'mastered',
+		'detected',
+		'cheating-not-cute'
 	];
 
 	private var camFollow:FlxObject;
