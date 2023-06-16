@@ -743,6 +743,10 @@ class PlayState extends MusicBeatState
 					stageCheck = 'house';
 			        case 'mastered':
 					stageCheck = 'mastered';
+			        case 'detected':
+					stageCheck = 'detected';
+			        case 'cheating-not-cute':
+					stageCheck = 'mixed';
 				case 'polygonized' | 'polygonized-2.5' | 'furiosity':
 					stageCheck = 'red-void';
 				case 'bonus-song':
@@ -2589,6 +2593,11 @@ class PlayState extends MusicBeatState
 						bg.setGraphicSize(Std.int(bg.width * 3));
 						weirdBG = bg;
 						stageName = 'unfairness';
+					case 'mixed':
+						bgZoom = 0.8;
+						bg.loadGraphic(Paths.image('backgrounds/void/mixed', 'shared'));
+						stageName = 'daveEvilHouse';
+						weirdBG = bg;
 
 				if (['unfairness'].contains(SONG.song.toLowerCase()) && FlxG.random.int(0, 4) == 0)
 				{
