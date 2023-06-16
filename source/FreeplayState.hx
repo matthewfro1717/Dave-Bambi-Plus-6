@@ -406,12 +406,14 @@ class FreeplayState extends MusicBeatState
 			case 'fanmade':
 				addWeek(['Blitz', 'No-Legs'], 1, ['dave-annoyed', 'dave']);
 				addWeek(['Duper'], 2, ['bambi-angey', 'bambi-new']);
+				addWeek(['Cheating-Not-Cute'], 2, ['bambi_pissyboyBUTREALLYFAROMGPOMGGGG']);
 				if (FlxG.save.data.importumaniaFound)
 					addWeek(['Importumania'], 14, ['importumania']);
 			case 'cover':
 				addWeek(['Confronting-Yourself'], 4, ['tristan-festival']);
 				addWeek(['Cob', 'Super-Saiyan'], 1, ['dave', 'dave-annoyed']);
 				addWeek(['Foolhardy'], 2, ['zardyMyBeloved']);
+				addWeek(['detected'], 1, ['dave-detected']);
 				if (FlxG.save.data.electricCockaldoodledooUnlocked)
 					addWeek(['Cuzsie-X-Kapi-Shipping-Cute'], 20, ['cuzsiee']);
 			case 'finale':
