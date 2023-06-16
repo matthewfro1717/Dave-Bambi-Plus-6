@@ -44,6 +44,9 @@ class CreditsPopUp extends FlxSpriteGroup
 			case 'mastered':
 				songCreator = 'AL23 \nChart by AngryLuigi23';
 				songCreatorIcon = 'AL23 & AngryLuigi23';
+		        case 'detected':
+				songCreator = 'ying \nCover by Funky Eyy!'
+				songCreatorIcon = 'ying & Funky Eyy!';
 			case 'exploitation':
 				songCreator = 'Oxygen';
 			case 'memory' | 'mealie':
