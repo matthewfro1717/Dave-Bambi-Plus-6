@@ -679,6 +679,29 @@ class Character extends FlxSprite
 				skins.set('recursed', 'dave-3d-recursed');
 
 				playAnim('idle');
+			case 'dave_3d':
+				// DAVE SHITE ANIMATION LOADING CODE
+				frames = Paths.getSparrowAtlas('dave/classic/characters/2.5/Dave_Furiosity', 'shared');
+
+				animation.addByPrefix('idle', 'IDLE', 24, false);
+				animation.addByPrefix('singUP', 'UP', 24, false);
+				animation.addByPrefix('singRIGHT', 'RIGHT', 24, false);
+				animation.addByPrefix('singDOWN', 'DOWN', 24, false);
+				animation.addByPrefix('singLEFT', 'LEFT', 24, false);
+		
+				loadOffsetFile(curCharacter + (isPlayer ? '-playable' : ''));
+				
+				globalOffset = [0, -250];
+				
+				barColor = FlxColor.fromRGB(249, 180, 207);
+
+				setGraphicSize(Std.int((width * 1) / furiosityScale));
+				updateHitbox();
+				antialiasing = false;
+
+				skins.set('recursed', 'dave-3d-recursed');
+
+				playAnim('idle');
 			case 'dave-angey-old':
 				// DAVE SHITE ANIMATION LOADING CODE
 				frames = Paths.getSparrowAtlas('dave/classic/characters/2.5/Dave_Furiosity', 'shared');
@@ -947,6 +970,23 @@ class Character extends FlxSprite
 				globalOffset = [37, 90];
 				skins.set('recursed', 'bambi-recursed');
 
+                        case 'bambi_pissyboyBUTREALLYFAROMGPOMGGGG':
+				frames = Paths.getSparrowAtlas('bambi/bambi_pissyboy', 'shared');
+				animation.addByPrefix('idle', 'idle', 24, false);
+				for (anim in ['left', 'down', 'up', 'right'])
+				{
+					animation.addByPrefix('sing${anim.toUpperCase()}', '$anim', 24, false);
+				}
+				
+				barColor = FlxColor.fromRGB(37, 191, 55);
+
+				loadOffsetFile(curCharacter + (isPlayer ? '-playable' : ''));
+				
+				globalOffset = [37, 90];
+				skins.set('recursed', 'bambi-recursed');
+
+				playAnim('idle');
+				
 			case 'bambi-new':
 				frames = Paths.getSparrowAtlas('bambi/bambiRemake', 'shared');
 				animation.addByPrefix('idle', 'bambi idle', 24, false);
