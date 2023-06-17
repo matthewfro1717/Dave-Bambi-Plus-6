@@ -47,8 +47,8 @@ class CreditsPopUp extends FlxSpriteGroup
 		        case 'cheating-not-cute':
 				songCreator = 'Cynda';
 		        case 'detected':
-				songCreator = 'ying \nCover by Funky Eyy!';
-				songCreatorIcon = 'ying & Funky Eyy!';
+				songCreator = 'ying \nCover by Funky Eyy! \nSprites by Matthew';
+				songCreatorIcon = 'ying & Funky Eyy! & Matthew';
 			case 'exploitation':
 				songCreator = 'Oxygen';
 			case 'memory' | 'mealie':
