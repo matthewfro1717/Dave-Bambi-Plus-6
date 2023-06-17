@@ -1230,12 +1230,12 @@ class PlayState extends MusicBeatState
 				boyfriend.x += 80;
 				boyfriend.y += 140;
 	                case 'detected':
-				gf.x += 248;
-				gf.x += -33;
-				boyfriend.x += 753;
-				boyfriend.y += 238;
-				dad.x += 125;
-				dad.y += -75;
+				gf.x += 400;
+				gf.x += 250;
+				boyfriend.x += 800;
+				boyfriend.y += 174;
+				dad.x += -30;
+				dad.y += 215;
 		}
 
 		switch (stageCheck)
