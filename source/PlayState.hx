@@ -2599,7 +2599,7 @@ class PlayState extends MusicBeatState
 					case 'mixed':
 						bgZoom = 0.8;
 						bg.loadGraphic(Paths.image('backgrounds/void/mixed', 'shared'));
-						stageName = 'mixed';
+						stageName = 'mixed-void';
 						weirdBG = bg;
 
 				if (['unfairness'].contains(SONG.song.toLowerCase()) && FlxG.random.int(0, 4) == 0)
