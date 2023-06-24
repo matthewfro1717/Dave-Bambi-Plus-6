@@ -5039,28 +5039,6 @@ class PlayState extends MusicBeatState
 					DiscordClient.changePresence("I have your IP address", null, null, true);
 					#end
 					return;
-				case 'unfairness':
-					FlxG.switchState(new TerminalCheatingState([
-						new TerminalText(0, [['Warning: ', 1], ['Inteference with an undisclosed varible detected', 1],]),
-						new TerminalText(200, [['Load unfairness.json', 0.5]]),
-						new TerminalText(0, [['ERROR: File is corrupted trying to load an alternative...', 3]]),
-						new TerminalText(0, [['Warning: ', 1],  ['An alternative file has been found.', 2],]),
-						new TerminalText(200, [['Load cozen.json', 0.5]]),
-					], function()
-					{
-						shakeCam = false;
-						#if SHADERS_ENABLED
-						screenshader.Enabled = false;
-						#end
-
-						isStoryMode = false;
-						PlayState.SONG = Song.loadFromJson("cozen"); // you dun fucked up
-						isStoryMode = false;
-						PlayState.storyWeek = 14;
-						FlxG.save.data.cozenFound = true;
-						FlxG.switchState(new PlayState());
-					}));
-					return;
 				case 'exploitation' | 'master' | 'importumania' | 'secret-mod-leak' | 'secret':
 					health = 0;
 				case 'recursed':
