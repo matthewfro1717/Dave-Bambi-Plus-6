@@ -2025,7 +2025,7 @@ class PlayState extends MusicBeatState
 				add(redbg);
 
 		        case 'detected':
-				bgZoom = 1.2;
+				bgZoom = 0.7;
 				curStage = 'detected';
 
 				var hexBack = new FlxSprite(-500, -30).loadGraphic(Paths.image('backgrounds/detected/hexBack'));
