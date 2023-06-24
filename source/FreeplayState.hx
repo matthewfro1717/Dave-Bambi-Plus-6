@@ -360,6 +360,7 @@ class FreeplayState extends MusicBeatState
 						addWeek(['Cheating'], 14, ['bambi-3d']);
 					if (FlxG.save.data.unfairnessFound)
 						addWeek(['Unfairness'], 15, ['bambi-unfair']);
+				        if (FlxG.save.data.cozenFound)
 						addWeek(['Cozen'], 15, ['bambi-unfair']);
 				}
 				if (FlxG.save.data.exbungoFound)
@@ -429,6 +430,7 @@ class FreeplayState extends MusicBeatState
 					addWeek(['Rigged'], 14, ['bambi-3d']);
 				if (FlxG.save.data.unfairnessFound)
 					addWeek(['Unfairness'], 15, ['bambi-unfair']);
+				if (FlxG.save.data.cozenFound)
 				        addWeek(['Cozen'], 15, ['bambi-unfair']);
 				if (FlxG.save.data.exploitationFound)
 					addWeek(['Exploitation'], 16, ['expunged']);
