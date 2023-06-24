@@ -355,6 +355,9 @@ class PlayState extends MusicBeatState
 	var daveHouseDream:Array<FlxSprite> = [];
 	var tristanHouseDream:Array<FlxSprite> = [];
 
+	//Cozen stuff
+	var redPortal:BGSprite;
+	
 	//bg stuff
 	var baldi:BGSprite;
 	var spotLight:FlxSprite;
@@ -389,7 +392,7 @@ class PlayState extends MusicBeatState
 	var desertBG:BGSprite;
 	var desertBG2:BGSprite;
 	var sign:BGSprite;
-    var georgia:BGSprite;
+        var georgia:BGSprite;
 	var train:BGSprite;
 	var maze:BGSprite;
 	var trainSpeed:Float;
@@ -2605,7 +2608,7 @@ class PlayState extends MusicBeatState
 				if (['unfairness'].contains(SONG.song.toLowerCase()) && !MathGameState.failedGame && FlxG.random.int(0, 4) == 0)
 				{
 					FlxG.mouse.visible = true;
-					var redPortal = new BGSprite('redPortal', -182, 977, 'backgrounds/void/redPortal', [], 1, 1, true, true);
+					redPortal = new BGSprite('redPortal', -182, 977, 'backgrounds/void/redPortal', [], 1, 1, true, true);
 					redPortal.setGraphicSize(Std.int(redPortal.width * 0.5));
 					redPortal.updateHitbox();
 				}
