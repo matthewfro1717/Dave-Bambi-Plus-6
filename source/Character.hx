@@ -301,7 +301,7 @@ class Character extends FlxSprite
 				}
 				animation.addByPrefix('hey', 'hey', 24, false);
 	
-				globalOffset = [-280, -120];
+				globalOffset = [0, 0];
 				loadOffsetFile(curCharacter + (isPlayer ? '-playable' : ''));
 
 				barColor = FlxColor.fromRGB(15, 95, 255);
@@ -967,7 +967,7 @@ class Character extends FlxSprite
 
 				loadOffsetFile(curCharacter + (isPlayer ? '-playable' : ''));
 				
-				globalOffset = [-650, 90];
+				globalOffset = [0, 0];
 				skins.set('recursed', 'bambi-recursed');
 
                         case 'bambi_pissyboyBUTREALLYFAROMGPOMGGGG':
