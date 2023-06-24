@@ -2602,11 +2602,11 @@ class PlayState extends MusicBeatState
 						stageName = 'mixed-void';
 						weirdBG = bg;
 
-				if (['unfairness'].contains(SONG.song.toLowerCase()) && FlxG.random.int(0, 4) == 0)
+				if (['unfairness'].contains(SONG.song.toLowerCase()) && !MathGameState.failedGame && FlxG.random.int(0, 4) == 0)
 				{
 					FlxG.mouse.visible = true;
-					var redPortal = new BGSprite('hat', -30, 550, 'backgrounds/void/redPortal', [], 1, 1, true, true);
-					redPortal.setGraphicSize(Std.int(redPortal.width * 0.36));
+					var redPortal = new BGSprite('redPortal', -182, 977, 'backgrounds/void/redPortal', [], 1, 1, true, true);
+					redPortal.setGraphicSize(Std.int(redPortal.width * 0.5));
 					redPortal.updateHitbox();
 				}
 	
@@ -4152,6 +4152,30 @@ class PlayState extends MusicBeatState
 				FlxG.switchState(new MathGameState());
 			}
 		}
+		if (redPortal != null)
+			{
+				FlxG.switchState(new TerminalCheatingState([
+					new TerminalText(0, [['Warning: ', 1], ['Inteference with an undisclosed varible detected', 1],]),
+					new TerminalText(200, [['Load unfairness.json', 0.5]]),
+					new TerminalText(0, [['ERROR: File is corrupted trying to load an alternative...', 3]]),
+					new TerminalText(0, [['Warning: ', 1],  ['An alternative file has been found.', 2],]),
+					new TerminalText(200, [['Load cozen.json', 0.5]]),
+				], function()
+				{
+					shakeCam = false;
+					#if SHADERS_ENABLED
+					screenshader.Enabled = false;
+					#end
+
+					isStoryMode = false;
+					PlayState.SONG = Song.loadFromJson("cozen"); // you dun fucked up
+					isStoryMode = false;
+					PlayState.storyWeek = 14;
+					FlxG.save.data.cozenFound = true;
+					FlxG.switchState(new PlayState());
+				}));
+				return;
+			}
 		if (hat != null)
 			{
 				if (FlxG.mouse.overlaps(hat) && FlxG.mouse.justPressed)
