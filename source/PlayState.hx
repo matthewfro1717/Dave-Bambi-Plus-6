@@ -2599,13 +2599,8 @@ class PlayState extends MusicBeatState
 						bg.setGraphicSize(Std.int(bg.width * 3));
 						weirdBG = bg;
 						stageName = 'unfairness';
-					case 'mixed':
-						bgZoom = 0.8;
-						bg.loadGraphic(Paths.image('backgrounds/void/mixed', 'shared'));
-						stageName = 'mixed-void';
-						weirdBG = bg;
 
-				if (['unfairness'].contains(SONG.song.toLowerCase()) && !MathGameState.failedGame && FlxG.random.int(0, 4) == 0)
+				if (['unfairness'].contains(SONG.song.toLowerCase())
 				{
 					FlxG.mouse.visible = true;
 					redPortal = new BGSprite('redPortal', -182, 977, 'backgrounds/void/redPortal', [], 1, 1, true, true);
