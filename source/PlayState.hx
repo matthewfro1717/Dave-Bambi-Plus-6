@@ -2624,11 +2624,11 @@ class PlayState extends MusicBeatState
 				bgZoom = 0.7;
 				stageName = 'unfairness';
 
-				var bg:BGSprite = new BGSprite(Paths.image('backgrounds/void/scarybg'));
-				bg.setPosition(0, 200);
+				var bg:BGSprite = new BGSprite('void', 0, 200, Paths.image('backgrounds/void/scarybg'), null, 1, 1, false, true);
 				bg.setGraphicSize(Std.int(bg.width * 3));
 				sprites.add(bg);
 				add(bg);
+
 				voidShader(bg);
 
 				if (['unfairness'].contains(SONG.song.toLowerCase()) && FlxG.random.int(0, 4) == 0)
