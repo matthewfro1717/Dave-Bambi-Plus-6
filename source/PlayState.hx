@@ -4185,18 +4185,13 @@ class PlayState extends MusicBeatState
 				new TerminalText(200, [['Load cozen.json', 0.5]]),
 				], function()
 
-			         	shakeCam = false;
-			        	#if SHADERS_ENABLED
-					screenshader.Enabled = false;
-				 	#end
-
-				        isStoryMode = false;
-			         	PlayState.SONG = Song.loadFromJson("cozen"); // you dun fucked up
-				       	isStoryMode = false;
-				 	PlayState.storyWeek = 14;
-				        FlxG.save.data.cozenFound = true;
+				 isStoryMode = false;
+			 	 PlayState.SONG = Song.loadFromJson("cozen"); // you dun fucked up
+				 isStoryMode = false;
+			 	 PlayState.storyWeek = 14;
+				 FlxG.save.data.cozenFound = true;
 		
-					FlxG.switchState(new PlayState());
+				 FlxG.switchState(new PlayState());
 			}
 		}
 		
