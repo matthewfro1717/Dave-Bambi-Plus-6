@@ -978,13 +978,11 @@ class Character extends FlxSprite
 					animation.addByPrefix('sing${anim.toUpperCase()}', '$anim', 24, false);
 				}
 				
-				barColor = FlxColor.fromRGB(37, 191, 55);
+				barColor = FlxColor.fromRGB(0, 255, 0);
 
 				loadOffsetFile(curCharacter + (isPlayer ? '-playable' : ''));
 				
-				globalOffset = [37, 90];
-				skins.set('recursed', 'bambi-recursed');
-
+				globalOffset = [-180, -180];
 				playAnim('idle');
 				
 			case 'bambi-new':
