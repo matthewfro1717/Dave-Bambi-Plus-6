@@ -2600,7 +2600,7 @@ class PlayState extends MusicBeatState
 						weirdBG = bg;
 						stageName = 'unfairness';
 
-				if (['unfairness'].contains(SONG.song.toLowerCase())
+				if (['unfairness'].contains(SONG.song.toLowerCase()) && FlxG.random.int(0, 4) == 0)
 				{
 					FlxG.mouse.visible = true;
 					redPortal = new BGSprite('redPortal', -182, 977, 'backgrounds/void/redPortal', [], 1, 1, true, true);
