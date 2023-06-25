@@ -2020,14 +2020,14 @@ class PlayState extends MusicBeatState
 				add(stageFront);
 				
 				var blue3d:BGSprite = new BGSprite('bg', -275, -200, Paths.image('backgrounds/blue3d'), null, 1, 1, true, true);
-				new Animation('bganimationloop', 'blue3d', 5, true, [false, false]);
-			        blue3d.animation.play('bganimationloop');
+				new Animation('idle', 'bganimationloop', 5, true, [false, false]);
+			        blue3d.animation.play('idle');
 				blue3d.visible = false;
 				add(blue3d);
 					
 				var redbg:BGSprite = new BGSprite('bg', -275, -200, Paths.image('backgrounds/redbg'), null, 1, 1, true, true);
-				new Animation('bganimationloop', 'redbg', 5, true, [false, false]);
-			        redbg.animation.play('bganimationloop');
+				new Animation('idle', 'bganimationloop', 5, true, [false, false]);
+			        redbg.animation.play('idle');
 				redbg.visible = false;
 				add(redbg);
 
@@ -2623,6 +2623,8 @@ class PlayState extends MusicBeatState
 					redPortal = new BGSprite('redPortal', -182, 977, 'backgrounds/void/redPortal', [], 1, 1, true, true);
 					redPortal.setGraphicSize(Std.int(redPortal.width * 0.5));
 					redPortal.updateHitbox();
+					sprites.insert(members.indexOf(bg), redPortal);
+					insert(members.indexOf(bg), redPortal);
 				}
 	
 				case 'banana-hell': // this is a Cockey moment
