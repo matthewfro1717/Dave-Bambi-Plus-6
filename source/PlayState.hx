@@ -1143,7 +1143,7 @@ class PlayState extends MusicBeatState
 				dad.y -= 100;
 				if (isShaggy) boyfriend.y += 150;
 				if (boyfriend.curCharacter == 'godshaggy') boyfriend.x += 300;
-			case 'desktop':
+			case 'mixed':
 				dad.setPosition(100, 100);
 				boyfriend.setPosition(770, 100);
 				gf.setPosition(400, 130);
