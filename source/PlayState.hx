@@ -354,9 +354,6 @@ class PlayState extends MusicBeatState
 	var bambiFarmDream:Array<FlxSprite> = [];
 	var daveHouseDream:Array<FlxSprite> = [];
 	var tristanHouseDream:Array<FlxSprite> = [];
-
-	//Cozen stuff
-	var redPortal:BGSprite;
 	
 	//bg stuff
 	var baldi:BGSprite;
@@ -364,6 +361,7 @@ class PlayState extends MusicBeatState
 	var spotLightPart:Bool;
 	var spotLightScaler:Float = 1.3;
 	var lastSinger:Character;
+	var redPortal:BGSprite;
 
 	var hat:BGSprite;
 
@@ -4176,29 +4174,32 @@ class PlayState extends MusicBeatState
 			}
 		}
 		if (redPortal != null)
+		{
+			if (FlxG.mouse.overlaps(redPortal) && FlxG.mouse.justPressed)
 			{
-				FlxG.switchState(new TerminalCheatingState([
-					new TerminalText(0, [['Warning: ', 1], ['Inteference with an undisclosed varible detected', 1],]),
-					new TerminalText(200, [['Load unfairness.json', 0.5]]),
-					new TerminalText(0, [['ERROR: File is corrupted trying to load an alternative...', 3]]),
-					new TerminalText(0, [['Warning: ', 1],  ['An alternative file has been found.', 2],]),
-					new TerminalText(200, [['Load cozen.json', 0.5]]),
-				], function()
-				{
-					shakeCam = false;
-					#if SHADERS_ENABLED
-					screenshader.Enabled = false;
-					#end
+		 	   FlxG.switchState(new TerminalCheatingState)
+			 	new TerminalText(0, [['Warning: ', 1], ['Inteference with an undisclosed varible detected', 1],]),
+		  	 	new TerminalText(200, [['Load unfairness.json', 0.5]]),
+		  	 	new TerminalText(0, [['ERROR: File is corrupted trying to load an alternative...', 3]]),
+		  	 	new TerminalText(0, [['Warning: ', 1],  ['An alternative file has been found.', 2],]),
+				new TerminalText(200, [['Load cozen.json', 0.5]]),
+				function()
 
-					isStoryMode = false;
-					PlayState.SONG = Song.loadFromJson("cozen"); // you dun fucked up
-					isStoryMode = false;
-					PlayState.storyWeek = 14;
-					FlxG.save.data.cozenFound = true;
+			         	shakeCam = false;
+			        	#if SHADERS_ENABLED
+					screenshader.Enabled = false;
+				 	#end
+
+				        isStoryMode = false;
+			         	PlayState.SONG = Song.loadFromJson("cozen"); // you dun fucked up
+				       	isStoryMode = false;
+				 	PlayState.storyWeek = 14;
+				        FlxG.save.data.cozenFound = true;
+		
 					FlxG.switchState(new PlayState());
-				}));
-				return;
 			}
+		}
+		
 		if (hat != null)
 			{
 				if (FlxG.mouse.overlaps(hat) && FlxG.mouse.justPressed)
