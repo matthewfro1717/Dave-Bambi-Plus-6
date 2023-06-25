@@ -1143,6 +1143,10 @@ class PlayState extends MusicBeatState
 				dad.y -= 100;
 				if (isShaggy) boyfriend.y += 150;
 				if (boyfriend.curCharacter == 'godshaggy') boyfriend.x += 300;
+			case 'desktop':
+				dad.setPosition(100, 100);
+				boyfriend.setPosition(770, 100);
+				gf.setPosition(400, 130);
 			case 'roof':
 				dad.setPosition(-3, 467);
 				boyfriend.setPosition(859, 343);
@@ -2575,6 +2579,19 @@ class PlayState extends MusicBeatState
 				sprites.add(expungedBG);
 				add(expungedBG);
 				voidShader(expungedBG);
+			case 'mixed':
+				bgZoom = 0.5;
+				stageName = 'mixed';
+
+				var bg:BGSprite = new BGSprite('void', -600, -200, '', null, 1, 1, false, true);
+				bg.loadGraphic(Paths.image('backgrounds/void/mixed', 'shared'));
+				bg.setPosition(0, 200);
+				bg.setGraphicSize(Std.int(expungedBG.width * 2));
+				bg.scrollFactor.set();
+				bg.antialiasing = false;
+				sprites.add(bg);
+				add(bg);
+				voidShader(bg);
 			case 'red-void' | 'green-void' | 'glitchy-void' | "banana-hell":
 				bgZoom = 0.7;
 
