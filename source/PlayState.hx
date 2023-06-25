@@ -2610,22 +2610,6 @@ class PlayState extends MusicBeatState
 						bg.setPosition(-700, -350);
 						bg.setGraphicSize(Std.int(bg.width * 2));
 						weirdBG = bg;
-					case 'glitchy-void':
-						bg.loadGraphic(Paths.image('backgrounds/void/scarybg'));
-						bg.setPosition(0, 200);
-						bg.setGraphicSize(Std.int(bg.width * 3));
-						weirdBG = bg;
-						stageName = 'unfairness';
-
-				if (['unfairness'].contains(SONG.song.toLowerCase()) && FlxG.random.int(0, 4) == 0)
-				{
-					FlxG.mouse.visible = true;
-					redPortal = new BGSprite('redPortal', -182, 977, 'backgrounds/void/redPortal', [], 1, 1, true, true);
-					redPortal.setGraphicSize(Std.int(redPortal.width * 0.5));
-					redPortal.updateHitbox();
-					sprites.insert(members.indexOf(bg), redPortal);
-					insert(members.indexOf(bg), redPortal);
-				}
 	
 				case 'banana-hell': // this is a Cockey moment
 					bg.loadGraphic(Paths.image('backgrounds/void/bananaVoid1'));
@@ -2637,6 +2621,28 @@ class PlayState extends MusicBeatState
 				sprites.add(bg);
 				add(bg);
 				voidShader(bg);
+			       
+			case 'glitchy-void':
+				bgZoom = 0.7;
+				stageName = 'unfairness';
+
+				var bg:BGSprite = new BGSprite(Paths.image('backgrounds/void/scarybg'));
+				bg.setPosition(0, 200);
+				bg.setGraphicSize(Std.int(bg.width * 3));
+				sprites.add(bg);
+				add(bg);
+				voidShader(bg);
+
+				if (['unfairness'].contains(SONG.song.toLowerCase()) && FlxG.random.int(0, 4) == 0)
+				{
+					FlxG.mouse.visible = true;
+					redPortal = new BGSprite('redPortal', -182, 977, 'backgrounds/void/redPortal', [], 1, 1, true, true);
+					redPortal.setGraphicSize(Std.int(redPortal.width * 0.5));
+					redPortal.updateHitbox();
+					sprites.insert(members.indexOf(bg), redPortal);
+					insert(members.indexOf(bg), redPortal);
+				}
+
 			case 'interdimension-void':
 				bgZoom = 0.6;
 				stageName = 'interdimension';
