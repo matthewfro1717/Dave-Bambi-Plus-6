@@ -10816,7 +10816,7 @@ class PlayState extends MusicBeatState
 					case 1176:
 						switchDad('dave-3d-mastered', dad.getPosition());
 				        case 639 | 1152 | 1919:
-						switchDad('dave-splitathon-mastered', dad.getPosition())
+						switchDad('dave-splitathon-mastered', dad.getPosition());
 				}
 			//exploitation stuff
 			case 'exploitation':
