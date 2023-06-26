@@ -2584,13 +2584,13 @@ class PlayState extends MusicBeatState
 				var bg:BGSprite = new BGSprite('void', -600, -200, '', null, 1, 1, false, true);
 				bg.loadGraphic(Paths.image('backgrounds/void/mixed', 'shared'));
 				bg.setPosition(0, 200);
-				bg.setGraphicSize(Std.int(expungedBG.width * 2));
+				bg.setGraphicSize(Std.int(bg.width * 2));
 				bg.scrollFactor.set();
 				bg.antialiasing = false;
 				sprites.add(bg);
 				add(bg);
 				voidShader(bg);
-			case 'red-void' | 'green-void' | 'glitchy-void' | "banana-hell":
+			case 'red-void' | 'green-void' | "banana-hell":
 				bgZoom = 0.7;
 
 				var bg:BGSprite = new BGSprite('void', -600, -200, '', null, 1, 1, false, true);
@@ -2609,29 +2609,29 @@ class PlayState extends MusicBeatState
 						bg.setGraphicSize(Std.int(bg.width * 2));
 						weirdBG = bg;
 	
-				case 'banana-hell': // this is a Cockey moment
-					bg.loadGraphic(Paths.image('backgrounds/void/bananaVoid1'));
-					bg.setPosition(-700, -300);
-					bg.setGraphicSize(Std.int(bg.width * 2.55), Std.int(bg.height * 2));
-					weirdBG = bg;
-					stageName = 'banana-land';
+					case 'banana-hell': // this is a Cockey moment
+						bg.loadGraphic(Paths.image('backgrounds/void/bananaVoid1'));
+					        bg.setPosition(-700, -300);
+						bg.setGraphicSize(Std.int(bg.width * 2.55), Std.int(bg.height * 2));
+					        weirdBG = bg;
+					        stageName = 'banana-land';
+
 				}
 				sprites.add(bg);
 				add(bg);
 				voidShader(bg);
-			       
 			case 'glitchy-void':
 				bgZoom = 0.7;
 				stageName = 'unfairness';
 
-				var bg:BGSprite = new BGSprite('void', 0, 200, Paths.image('backgrounds/void/scarybg'), null, 1, 1, false, true);
+				var bg:BGSprite = new BGSprite('void', -600, -200, Paths.image('backgrounds/void/scarybg'), null, 1, 1, true, true);
 				bg.setGraphicSize(Std.int(bg.width * 3));
 				sprites.add(bg);
 				add(bg);
 
 				voidShader(bg);
 
-				if (['unfairness'].contains(SONG.song.toLowerCase()) && FlxG.random.int(0, 4) == 0)
+				if (['unfairness'].contains(SONG.song.toLowerCase())
 				{
 					FlxG.mouse.visible = true;
 					redPortal = new BGSprite('redPortal', -182, 977, 'backgrounds/void/redPortal', [], 1, 1, true, true);
@@ -2640,7 +2640,7 @@ class PlayState extends MusicBeatState
 					sprites.insert(members.indexOf(bg), redPortal);
 					insert(members.indexOf(bg), redPortal);
 				}
-
+				
 			case 'interdimension-void':
 				bgZoom = 0.6;
 				stageName = 'interdimension';
