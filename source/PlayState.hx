@@ -7845,34 +7845,17 @@ class PlayState extends MusicBeatState
 				switch (curStep)
 				{
 					case 384 | 895 | 1412:
-						dad.visible = false;
-						dadmirror.visible = true;
 						blue3d.visible = true;
-						iconP2.changeIcon(dad.curCharacter);
 					case 639 | 1152 | 1919:
-						dad.visible = false;
-						dadmirror3.visible = true;
 						blue3d.visible = false;
-						iconP2.changeIcon(dad.curCharacter);
 					case 1152:
-						dad.visible = false;
-						dadmirror2.visible = true;
 						redbg.visible = true;
-						iconP2.changeIcon(dad.curCharacter);
-					case 1176:		
-				                dad.visible = false;
-						dadmirror.visible = true;
+					case 1176:
 						blue3d.visible = true;
 						redbg.visible = false;
-						remove(dad);
-						iconP2.changeIcon(dad.curCharacter);
 				        case 639 | 1152 | 1919:
-				                dad.visible = false;
-						dadmirror3.visible = true;
 						blue3d.visible = false;
 						redbg.visible = false;
-						remove(dad);
-						iconP2.changeIcon(dad.curCharacter);
 					case 2047:
 						if (misses > 0) {
 							dad.animation.play('damn', true);
@@ -10821,6 +10804,20 @@ class PlayState extends MusicBeatState
 		}
 		switch (curSong.toLowerCase())
 		{
+			case 'mastered':
+				switch (curStep)
+				{
+					case 384 | 895 | 1412:
+						switchDad('dave-3d-mastered', dad.getPosition());
+					case 639 | 1152 | 1919:
+						switchDad('dave-splitathon-mastered', dad.getPosition());
+					case 1152:
+						switchDad('dave-scared-mastered', dad.getPosition());
+					case 1176:
+						switchDad('dave-3d-mastered', dad.getPosition());
+				        case 639 | 1152 | 1919:
+						switchDad('dave-splitathon-mastered', dad.getPosition())
+				}
 			//exploitation stuff
 			case 'exploitation':
 				switch(curStep)
