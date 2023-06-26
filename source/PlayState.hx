@@ -2631,7 +2631,7 @@ class PlayState extends MusicBeatState
 
 				voidShader(bg);
 
-				if (['unfairness'].contains(SONG.song.toLowerCase())
+				if (['unfairness'].contains(SONG.song.toLowerCase()))
 				{
 					FlxG.mouse.visible = true;
 					redPortal = new BGSprite('redPortal', -182, 977, 'backgrounds/void/redPortal', [], 1, 1, true, true);
