@@ -1,4 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<TextureAtlas imagePath="redPortal.png">
-<SubTexture name="redPortal Idle0000" x="0" y="0" width="759" height="782" frameX="0" frameY="0" frameWidth="759" frameHeight="782" />
-</TextureAtlas>
