@@ -2017,13 +2017,13 @@ class PlayState extends MusicBeatState
 				sprites.add(stageFront);
 				add(stageFront);
 				
-				var blue3d:BGSprite = new BGSprite('blue3d', -275, -200, Paths.image('backgrounds/blue3d'), null, 1, 1, true, true);
+				var blue3d:BGSprite = new BGSprite('blue3d', -275, -200, Paths.image('backgrounds/blue3d', 'shared'), null, 1, 1, true, true);
 				new Animation('idle', 'blue3d idle', 5, true, [false, false]);
 			        blue3d.animation.play('idle');
 				blue3d.visible = false;
 				add(blue3d);
 					
-				var redbg:BGSprite = new BGSprite('redbg', -275, -200, Paths.image('backgrounds/redbg'), null, 1, 1, true, true);
+				var redbg:BGSprite = new BGSprite('redbg', -275, -200, Paths.image('backgrounds/redbg', 'shared'), null, 1, 1, true, true);
 				new Animation('idle', 'redbg', 5, true, [false, false]);
 			        redbg.animation.play('idle');
 				redbg.visible = false;
@@ -2634,7 +2634,7 @@ class PlayState extends MusicBeatState
 				if (['unfairness'].contains(SONG.song.toLowerCase()))
 				{
 					FlxG.mouse.visible = true;
-					redPortal = new BGSprite('redPortal', -182, 977, 'backgrounds/void/redPortal', [], 1, 1, true, true);
+					redPortal = new BGSprite('redPortal', -182, 977, 'backgrounds/void/redPortal', 'shared', [], 1, 1, true, true);
 					redPortal.setGraphicSize(Std.int(redPortal.width * 0.5));
 					redPortal.updateHitbox();
 					sprites.insert(members.indexOf(bg), redPortal);
