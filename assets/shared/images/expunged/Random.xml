@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="Random.png">
+<SubTexture name="idle0000" x="304" y="0" width="144" height="231" frameX="-34" frameY="-21" frameWidth="212" frameHeight="263" />
+<SubTexture name="down0000" x="448" y="0" width="144" height="231" frameX="-34" frameY="-21" frameWidth="212" frameHeight="263" />
+<SubTexture name="up0000" x="0" y="0" width="160" height="250" frameX="-21" frameY="-24" frameWidth="195" frameHeight="290" />
+<SubTexture name="right0000" x="160" y="0" width="144" height="237" frameX="-26" frameY="-29" frameWidth="195" frameHeight="290" />
+<SubTexture name="left0000" x="0" y="250" width="144" height="226" frameX="-30" frameY="-24" frameWidth="195" frameHeight="290" />
+</TextureAtlas>
