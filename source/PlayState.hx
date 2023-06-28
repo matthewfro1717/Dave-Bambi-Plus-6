@@ -766,6 +766,8 @@ class PlayState extends MusicBeatState
 					stageCheck = 'backyard';
 				case 'cheating' | 'oppression' | 'importumania':
 					stageCheck = 'green-void';
+				case 'cheating-random':
+					stageCheck = 'random-void';
 				case 'unfairness' | 'cozen':
 					stageCheck = 'glitchy-void';
 				case 'exploitation':
@@ -1211,6 +1213,11 @@ class PlayState extends MusicBeatState
 			case 'interdimension-void':
 				if (isShaggy) boyfriend.y += 100;
 			case 'green-void':
+				if (isShaggy) {
+					boyfriend.x += 150;
+					boyfriend.y += 50;
+				}
+			case 'random-void':
 				if (isShaggy) {
 					boyfriend.x += 150;
 					boyfriend.y += 50;
@@ -2590,7 +2597,7 @@ class PlayState extends MusicBeatState
 				sprites.add(bg);
 				add(bg);
 				voidShader(bg);
-			case 'red-void' | 'green-void' | "banana-hell":
+			case 'red-void' | 'random-void' | 'green-void' | "banana-hell":
 				bgZoom = 0.7;
 
 				var bg:BGSprite = new BGSprite('void', -600, -200, '', null, 1, 1, false, true);
@@ -2601,6 +2608,11 @@ class PlayState extends MusicBeatState
 						bgZoom = 0.8;
 						bg.loadGraphic(Paths.image('backgrounds/void/redsky', 'shared'));
 						stageName = 'daveEvilHouse';
+						weirdBG = bg;
+					case 'random-void':
+						bgZoom = 0.8;
+						bg.loadGraphic(Paths.image('backgrounds/void/random', 'shared'));
+						stageName = 'random';
 						weirdBG = bg;
 					case 'green-void':
 						stageName = 'cheating';
