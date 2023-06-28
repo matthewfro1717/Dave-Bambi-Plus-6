@@ -39,9 +39,9 @@ class HealthIcon extends FlxSprite
 				loadGraphic(Paths.image('blank', 'shared'));
 		if(char != 'random')
 		{
-			loadGraphic(Paths.image('ui/iconGrid/' + char, 'preload'), true, 150, 150);
+			loadGraphic(Paths.image('ui/iconGrid/random'), true, 150, 150);
 			frames = Paths.getSparrowAtlas('ui/iconGrid/random');
-			animation.addByPrefix(char, char, 24, false, isPlayer, false);
+			animation.addByPrefix(char, 'random', 24, false, isPlayer, false);
 		}
 
 		antialiasing = !noAaChars.contains(char);
