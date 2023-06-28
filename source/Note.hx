@@ -334,9 +334,10 @@ class Note extends FlxSprite
 			{
 				str = 'cheating';
 				str = 'rigged';
+				str = 'cheating-random'
 			}
 		}
-		if (str == 'cheating' || str == 'rigged' && PlayState.modchartoption) {
+		if (str == 'cheating' || str == 'rigged' || str = 'cheating-random' && PlayState.modchartoption) {
 			if (mania == 0) {
 				switch (originalType)
 				{
@@ -403,7 +404,7 @@ class Note extends FlxSprite
 		}
 		if (!isSustainNote) {
 			if (!PlayState.modchartoption) {
-				if (PlayState.SONG.song.toLowerCase() == 'cheating' || PlayState.SONG.song.toLowerCase() == 'rigged')
+				if (PlayState.SONG.song.toLowerCase() == 'cheating' || PlayState.SONG.song.toLowerCase() == 'rigged' || PlayState.SONG.song.toLowerCase() == 'cheating-random')
 					LocalScrollSpeed = 0.75; // target practice old
 				if (PlayState.SONG.song.toLowerCase() == 'kabunga')
 					LocalScrollSpeed = 0.81;
