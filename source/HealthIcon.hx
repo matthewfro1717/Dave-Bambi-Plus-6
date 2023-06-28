@@ -39,12 +39,7 @@ class HealthIcon extends FlxSprite
 				loadGraphic(Paths.image('blank', 'shared'));
 		if(char != 'random')
 		{
-			loadGraphic(Paths.image('icons/$char'), true, 150, 150);
-
-			addIcon(char, 0);
-		}
-		else
-		{
+			loadGraphic(Paths.image('ui/iconGrid/' + char, 'preload'), true, 150, 150);
 			frames = Paths.getSparrowAtlas('ui/iconGrid/random');
 			animation.addByPrefix(char, char, 24, false, isPlayer, false);
 		}
