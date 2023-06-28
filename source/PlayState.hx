@@ -1292,7 +1292,7 @@ class PlayState extends MusicBeatState
 			'warmup', 'house', 'house-2.5', 'insanity', 'insanity-2.5', 'polygonized', 'polygonized-2.5', 'blocked', 'blocked-2.5',
 			'corn-theft', 'corn-theft-2.5', 'maze', 'maze-2.5', 'splitathon', 'shredder', 'greetings', 'interdimensional', 'rano', 
 			'bonus-song', 'bonus-song-2.5', 'bot-trot', 'escape-from-california', 'adventure', 'mealie', 'indignancy', 'memory',
-			'roofs', 'supernovae', 'glitch', 'master', 'cheating', 'unfairness', 'kabunga', 'recursed', 'exploitation' , 'cheating-random'
+			'roofs', 'supernovae', 'glitch', 'master', 'cheating', 'unfairness', 'kabunga', 'recursed', 'exploitation', 'cheating-random'
 		].contains(SONG.song.toLowerCase());
 
 		generateSong(SONG.song);
