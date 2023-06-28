@@ -337,7 +337,7 @@ class Note extends FlxSprite
 				str = 'cheating-random';
 			}
 		}
-		if (str == 'cheating' || str == 'rigged' || str = 'cheating-random' && PlayState.modchartoption) {
+		if (str == 'cheating' || str == 'rigged' || str == 'cheating-random' && PlayState.modchartoption) {
 			if (mania == 0) {
 				switch (originalType)
 				{
