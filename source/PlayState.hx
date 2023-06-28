@@ -6010,6 +6010,8 @@ class PlayState extends MusicBeatState
 					case "cheating":
 						if (modchartoption) CharacterSelectState.unlockCharacter('bambi-3d');
 						if (modchartoption) CharacterSelectState.unlockCharacter('bambi-3d-old');
+					case "cheating-random":
+						if (modchartoption) CharacterSelectState.unlockCharacter('random');
 					case "bonkers":
 						CharacterSelectState.unlockCharacter('longnosejohn');
 					case "unfairness":
