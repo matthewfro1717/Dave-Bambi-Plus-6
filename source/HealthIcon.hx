@@ -51,7 +51,7 @@ class HealthIcon extends FlxSprite
 			if (char != "none")
 			{
 				antialiasing = !noAaChars.contains(char);
-				animation.add('normal', 'random_icons idle' [0, 1], 0, false, isPlayer);
+				animation.add('normal', 'random_icons idle', [0, 1], 0, false, isPlayer);
 				animation.play('normal');
 			}
 		}
