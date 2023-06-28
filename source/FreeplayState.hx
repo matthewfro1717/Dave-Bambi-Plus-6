@@ -89,6 +89,7 @@ class FreeplayState extends MusicBeatState
 		0xFFCC5555,    // Electric-Cockaldoodledoo
 		0xFF008E00,    // longnosejohn
 		0xFFFFFFFF,    // cuzsiee
+		0xFF414142,    // random		
     ];
 	public static var skipSelect:Array<String> = 
 	[
@@ -358,6 +359,7 @@ class FreeplayState extends MusicBeatState
 				{
 					if (FlxG.save.data.cheatingFound)
 						addWeek(['Cheating'], 14, ['bambi-3d']);
+						addWeek(['Cheating-random'], 21, ['random']);
 					if (FlxG.save.data.unfairnessFound)
 						addWeek(['Unfairness'], 15, ['bambi-unfair']);
 				        if (FlxG.save.data.cozenFound)
@@ -426,6 +428,7 @@ class FreeplayState extends MusicBeatState
 			case 'terminal':
 				if (FlxG.save.data.cheatingFound)
 					addWeek(['Cheating'], 14, ['bambi-3d']);
+					addWeek(['Cheating-random'], 21, ['random']);
 				if (FlxG.save.data.riggedFound) // is back now
 					addWeek(['Rigged'], 14, ['bambi-3d']);
 				if (FlxG.save.data.unfairnessFound)
