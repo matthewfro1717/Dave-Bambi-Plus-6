@@ -2646,11 +2646,9 @@ class PlayState extends MusicBeatState
 				if (['unfairness'].contains(SONG.song.toLowerCase()))
 				{
 					FlxG.mouse.visible = true;
-					redPortal = new BGSprite('redPortal', -371, -2, Paths.image('backgrounds/void/redPortal', 'shared'), null, 0.65, 0.65);
+					redPortal = new BGSprite('baldi', -82, 77, Paths.image('backgrounds/void/redPortal', 'shared'), null, 0.65, 0.65);
 					redPortal.setGraphicSize(Std.int(baldi.width * 0.5));
 					redPortal.updateHitbox();
-					sprites.insert(members.indexOf(bg), redPortal);
-					insert(members.indexOf(bg), redPortal);
 				}
 				
 			case 'interdimension-void':
